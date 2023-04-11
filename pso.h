@@ -78,15 +78,21 @@ void ImprimeParticula(ENJAMBRE *Enj, unsigned int Id);
 /* Permite visualizar los parámetros del enjambre, y las partículas
  * que le componen.*/
 void ImprimeEnjambre(ENJAMBRE *Enj);
-/* Permite valorar al enjambre, según los criterios del PSO*/
+/* Permite valorar al enjambre, según los criterios del PSO
+ * y de la función objetivo*/
 void EvaluarEnjambre(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* Similar a EvaluarEnjambre, con la particularidad de que Inicializa
+ * los valores de Mejor Posicion Historica, de las particulas*/
 void EvaluacionInicialEnjambre(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* Renueva la valocidad basado en los vectores de
+ * Posición Actual,
+ * Mejor Posicion Historica y
+ * Mejor Posicion Global Actual*/
 void ActualizarVelocidad(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* Suma los valores de velocidad a la posición actual de
+ * cada partícula.*/
 void ActualizarPosicion(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* */
 void ActualizarMejoresPosiciones(ENJAMBRE *Enj);
 /* Creador de enjambres*/
 float FuncionObjetivo(float *Xi, unsigned int Np);
