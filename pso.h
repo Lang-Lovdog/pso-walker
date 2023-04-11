@@ -34,16 +34,16 @@ typedef struct {
 // Cada solución es repensada según los valores históricos
 // y valores presentes.
 typedef struct{
-  PARTICULA *Part;
-  unsigned int NumPart;
-  unsigned int NumParam;
-  unsigned int IdPg;
-  unsigned int NumMaxIter;
-  float C1;
-  float C2;
-  const float *LimSup;
-  const float *LimInf;
-  float X;
+  PARTICULA *Part;         // Partículas
+  unsigned int NumPart;    // Número de partículas
+  unsigned int NumParam;   // Número de parámetros del problema
+  unsigned int IdPg;       // ID de la mejor partícula del grupo
+  unsigned int NumMaxIter; // Número máximo d'iteraciones a realizar
+  float C1;                // Valor de peso C1
+  float C2;                // Valor de peso C2
+  const float *LimSup;     // Limites Superiores
+  const float *LimInf;     // Limites Inferiores
+  float X;                 // Factor de constricción (convergencia)
 }ENJAMBRE;
 
 
@@ -61,13 +61,13 @@ ENJAMBRE* CrearEnjambre(
  * Recibe el enjambre, la posición inicial, las variables del problema,
  * y los límites*/
 void InicializarEnjambre(
-    ENJAMBRE *Enj,
-    float X,
-    float C1,
-    float C2,
-    unsigned int NumIterMax,
-    const float *LInf,
-    const float *LSup
+    ENJAMBRE *__Enjambre__,
+    float __FactorConstriccion__,
+    float __VariableAleatoria_C1__,
+    float __VariableAleatoria_C2__,
+    unsigned int __MaximoDeIteraciones,
+    const float *__LimitesInferiores__,
+    const float *__LimitesSuperiores__
   );
 /* Una vez terminado el programa, ésta función liberará la memoria
  * que se reservó durante la creación del enjambre. Como argumento,
@@ -92,9 +92,11 @@ void ActualizarVelocidad(ENJAMBRE *Enj);
 /* Suma los valores de velocidad a la posición actual de
  * cada partícula.*/
 void ActualizarPosicion(ENJAMBRE *Enj);
-/* */
+/* Valora, en cada partícula, si el valor actual es mejor que'l mejor
+ * valor histórico; si los valores actuales son mejores, actualiza
+ * los parametros. */
 void ActualizarMejoresPosiciones(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* La función a evaluar, regresa el valor de fitness (precisión)*/
 float FuncionObjetivo(float *Xi, unsigned int Np);
 
 #endif __pso__header__
