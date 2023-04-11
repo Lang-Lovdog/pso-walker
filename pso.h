@@ -25,7 +25,7 @@ typedef struct {
   float *Vi;   //Velocidad
   float *Pi;   //Mejor Posicion Historica
   float  Xfit; //Valor de Fitnes para la posicion actual
-  float  Pfit; //Valor de Fitnes para la Mejor Posicion
+  float  Pfit; //Valor de Fitnes para la Mejor Posicion Historica
 }PARTICULA;
 
 // Definición de la estructura Enjambre
@@ -34,16 +34,16 @@ typedef struct {
 // Cada solución es repensada según los valores históricos
 // y valores presentes.
 typedef struct{
-  PARTICULA *Part;         // Partículas
-  unsigned int NumPart;    // Número de partículas
-  unsigned int NumParam;   // Número de parámetros del problema
-  unsigned int IdPg;       // ID de la mejor partícula del grupo
-  unsigned int NumMaxIter; // Número máximo d'iteraciones a realizar
-  float C1;                // Valor de peso C1
-  float C2;                // Valor de peso C2
-  const float *LimSup;     // Limites Superiores
-  const float *LimInf;     // Limites Inferiores
-  float X;                 // Factor de constricción (convergencia)
+  PARTICULA *Part;                          // Partículas
+  unsigned int CantidadDeParticulas;        // Número de partículas
+  unsigned int CantidadDeParametros;        // Número de parámetros del problema
+  unsigned int MejorParticulaDelGrupo;      // ID de la mejor partícula del grupo
+  unsigned int CantidadDeIteracionesMaxima; // Número máximo d'iteraciones a realizar
+  float C1;                                 // Valor de peso C1
+  float C2;                                 // Valor de peso C2
+  const float *LimitesSuperiores;           // Limites Superiores
+  const float *LimitesInferiores;           // Limites Inferiores
+  float X;                                  // Factor de constricción (convergencia)
 }ENJAMBRE;
 
 
@@ -53,18 +53,18 @@ typedef struct{
  * Recibe el número de partículas y el número de parámetros
  * (variables del problema)*/
 ENJAMBRE* CrearEnjambre(
-    unsigned int __NumeroParticulas__,
-    unsigned int __NumeroVariables__
+    unsigned int __CantidadDeParticulas__,
+    unsigned int __CantidadDeParametros__
   );
 /* Inicializador de enajmbres:
  * Defie los valoes predeterminados (de inicio), de los individuos.
  * Recibe el enjambre, la posición inicial, las variables del problema,
  * y los límites*/
 void InicializarEnjambre(
-    ENJAMBRE *__Enjambre__,
-    float __FactorConstriccion__,
-    float __VariableAleatoria_C1__,
-    float __VariableAleatoria_C2__,
+    ENJAMBRE    *__Enjambre__,
+    float        __FactorConstriccion__,
+    float        __ValorDePeso_C1__,
+    float        __ValorDePeso_C2__,
     unsigned int __MaximoDeIteraciones,
     const float *__LimitesInferiores__,
     const float *__LimitesSuperiores__
@@ -72,31 +72,51 @@ void InicializarEnjambre(
 /* Una vez terminado el programa, ésta función liberará la memoria
  * que se reservó durante la creación del enjambre. Como argumento,
  * recibe al apuntador del enjambre.*/
-void EliminarEnjambre(ENJAMBRE *Enj);
+void EliminarEnjambre(
+    ENJAMBRE *__Enjambre__
+  );
 /* Nos permite visualizar los parámetros de la partícula.*/
-void ImprimeParticula(ENJAMBRE *Enj, unsigned int Id);
+void ImprimeParticula(
+    ENJAMBRE     *__Enjambre__,
+    unsigned int  __ID_Particula__
+  );
 /* Permite visualizar los parámetros del enjambre, y las partículas
  * que le componen.*/
-void ImprimeEnjambre(ENJAMBRE *Enj);
+void ImprimeEnjambre(
+    ENJAMBRE *__Enjambre__
+  );
 /* Permite valorar al enjambre, según los criterios del PSO
  * y de la función objetivo*/
-void EvaluarEnjambre(ENJAMBRE *Enj);
+void EvaluarEnjambre(
+    ENJAMBRE *__Enjambre__
+  );
 /* Similar a EvaluarEnjambre, con la particularidad de que Inicializa
  * los valores de Mejor Posicion Historica, de las particulas*/
-void EvaluacionInicialEnjambre(ENJAMBRE *Enj);
+void EvaluacionInicialEnjambre(
+    ENJAMBRE *__Enjambre__
+  );
 /* Renueva la valocidad basado en los vectores de
  * Posición Actual,
  * Mejor Posicion Historica y
  * Mejor Posicion Global Actual*/
-void ActualizarVelocidad(ENJAMBRE *Enj);
+void ActualizarVelocidad(
+    ENJAMBRE *__Enjambre__
+  );
 /* Suma los valores de velocidad a la posición actual de
  * cada partícula.*/
-void ActualizarPosicion(ENJAMBRE *Enj);
+void ActualizarPosicion(
+    ENJAMBRE *__Enjambre__
+  );
 /* Valora, en cada partícula, si el valor actual es mejor que'l mejor
  * valor histórico; si los valores actuales son mejores, actualiza
  * los parametros. */
-void ActualizarMejoresPosiciones(ENJAMBRE *Enj);
+void ActualizarMejoresPosiciones(
+    ENJAMBRE *__Enjambre__
+  );
 /* La función a evaluar, regresa el valor de fitness (precisión)*/
-float FuncionObjetivo(float *Xi, unsigned int Np);
+float FuncionObjetivo(
+    float          *__ValoresDeParametros__,
+    unsigned int    __CantidadDeParametros__
+  );
 
 #endif __pso__header__
