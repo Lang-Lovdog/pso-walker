@@ -12,11 +12,14 @@
 // El individuo buscará tener la mejor posición
 // Habrán dos criterios: En el primero, ve la mejor
 // posición que ha tenido durante su existencia; en
-// el segundo, ve a aquel que tiene la mejor posición
+// el segundo, ve qué partícula tiene la mejor posición
 // en ese momento.
-// Recalcula su valor de paso (velocidad) y a partir de
+// Recalcula su valor de paso (velocidad) y, a partir de
 // ahí, suma el paso a su posición actual, obteniendo el
 // nuevo valor de posición.
+// La partícula requiere saber en cuántas dimensiones
+// estará moviéndose. Dichas dimensiones definirán al vector
+// posición y al vector velocidad.
 typedef struct { 
   float *Xi;   //Posicion
   float *Vi;   //Velocidad
@@ -46,18 +49,36 @@ typedef struct{
 
 // Operadores del enjambre (métodos)
 
-/* Creador de enjambres: Recive el número de partículas y el
- * número de parámetros (variables del problema)*/
-ENJAMBRE* CrearEnjambre(unsigned int __NumeroParticulas__ ,unsigned int __NumeroVariables__);
-/* */
-void InicializarEnjambre(ENJAMBRE *Enj, float X, float C1, float C2, unsigned int NumIterMax,const float *LInf,const float *LSup);
-/* Creador de enjambres*/
+/* Creador de enjambres:
+ * Recibe el número de partículas y el número de parámetros
+ * (variables del problema)*/
+ENJAMBRE* CrearEnjambre(
+    unsigned int __NumeroParticulas__,
+    unsigned int __NumeroVariables__
+  );
+/* Inicializador de enajmbres:
+ * Defie los valoes predeterminados (de inicio), de los individuos.
+ * Recibe el enjambre, la posición inicial, las variables del problema,
+ * y los límites*/
+void InicializarEnjambre(
+    ENJAMBRE *Enj,
+    float X,
+    float C1,
+    float C2,
+    unsigned int NumIterMax,
+    const float *LInf,
+    const float *LSup
+  );
+/* Una vez terminado el programa, ésta función liberará la memoria
+ * que se reservó durante la creación del enjambre. Como argumento,
+ * recibe al apuntador del enjambre.*/
 void EliminarEnjambre(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* Nos permite visualizar los parámetros de la partícula.*/
 void ImprimeParticula(ENJAMBRE *Enj, unsigned int Id);
-/* Creador de enjambres*/
+/* Permite visualizar los parámetros del enjambre, y las partículas
+ * que le componen.*/
 void ImprimeEnjambre(ENJAMBRE *Enj);
-/* Creador de enjambres*/
+/* Permite valorar al enjambre, según los criterios del PSO*/
 void EvaluarEnjambre(ENJAMBRE *Enj);
 /* Creador de enjambres*/
 void EvaluacionInicialEnjambre(ENJAMBRE *Enj);

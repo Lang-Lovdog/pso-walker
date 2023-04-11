@@ -131,7 +131,7 @@ void EvaluarEnjambre(ENJAMBRE *Enj)
     BestFit = FuncionObjetivo(Enj->Part[0].Xi, Enj->NumParam);
     for(unsigned int i=0; i<Enj->NumPart; i++)
     {
-        Enj->Part[i].Xfit =  FuncionObjetivo(Enj->Part[i].Xi, Enj->NumParam);
+        Enj->Part[i].Xfit = FuncionObjetivo(Enj->Part[i].Xi, Enj->NumParam);
         // Almacena el indice de la mejor particula de todo en enjambre
         if(Enj->Part[i].Xfit>BestFit)
         {
