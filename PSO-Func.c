@@ -20,7 +20,7 @@ int main(){
   Enj=CrearEnjambre(NumeroParticulas,Dimension);
   printf("\nSe creo el ENJAMBRE (IW)");
   InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
-  //EvaluacionInicialEnjambre(Enj);
+  EvaluacionInicialEnjambre(Enj);
   ImprimeEnjambre(Enj);
   while(t<Enj->MaximoDeIteraciones){
     printf("\nIteracion: %i",t);
