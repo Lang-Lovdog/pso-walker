@@ -52,9 +52,10 @@ typedef struct{
 /* Creador de enjambres:
  * Recibe el número de partículas y el número de parámetros
  * (variables del problema)*/
-ENJAMBRE* CrearEnjambre(
-    unsigned int __CantidadDeParticulas__,
-    unsigned int __CantidadDeParametros__
+void CrearEnjambre(
+    ENJAMBRE     *__Enjambre__,
+    unsigned int  __CantidadDeParticulas__,
+    unsigned int  __CantidadDeParametros__
   );
 /* Inicializador de enajmbres:
  * Defie los valoes predeterminados (de inicio), de los individuos.

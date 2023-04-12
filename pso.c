@@ -2,8 +2,8 @@
 
 // Definición d'as funciones
 
-ENJAMBRE* CrearEnjambre( unsigned int __CantidadDeParticulas__,unsigned int __CantidadDeParametros__){
-  ENJAMBRE *ptr;
+void CrearEnjambre(ENJAMBRE* __Enjambre__,unsigned int __CantidadDeParticulas__,unsigned int __CantidadDeParametros__){
+  ENJAMBRE *ptr=NULL;
   //Reservar la memoria para la estructura del enjambre
   ptr=(ENJAMBRE *)malloc(sizeof(ENJAMBRE));
   if(ptr==NULL){
@@ -14,18 +14,19 @@ ENJAMBRE* CrearEnjambre( unsigned int __CantidadDeParticulas__,unsigned int __Ca
   ptr->CantidadDeParametros=__CantidadDeParametros__;
 
   //Reservar la memoria para N particulas de M parametros
+  ptr->Part=NULL;
   ptr->Part=(PARTICULA *)malloc(__CantidadDeParticulas__*sizeof(PARTICULA));
-  if(ptr->Part==NULL)
-    { printf("Error al reservar la memoria para las Particulas.");
-      exit(0);
-    }
+  if(ptr->Part==NULL){
+    printf("Error al reservar la memoria para las Particulas.");
+    exit(0);
+  }
   //Reservar memoria para los 3 vectores de cada Particula
-  for(unsigned int i=0; i<__CantidadDeParticulas__; ++i)
-      { ptr->Part[i].Xi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
-        ptr->Part[i].Vi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
-        ptr->Part[i].Pi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
-      }
-  return ptr;
+  for(unsigned int i=0; i<__CantidadDeParticulas__; ++i){
+    ptr->Part[i].Xi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
+    ptr->Part[i].Vi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
+    ptr->Part[i].Pi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
+  }
+  __Enjambre__=ptr;
 }
 
 

@@ -7,31 +7,20 @@ const float LimiteSuperior[DIM_]={ 5.12,  5.12};
 const float LimiteInferior[DIM_]={-5.12, -5.12};
 const unsigned int NumeroMaximoDeIteraciones=300;
 
-ENJAMBRE* CrearEnjambre(unsigned int NumPart,unsigned int NumParam);
-void InicializarEnjambre(ENJAMBRE *Enj, float X, float C1, float C2, unsigned int NumIterMax,const float *LInf,const float *LSup);
-void EliminarEnjambre(ENJAMBRE *Enj);
-void ImprimeParticula(ENJAMBRE *Enj, unsigned int Id);
-void ImprimeEnjambre(ENJAMBRE *Enj);
-void EvaluarEnjambre(ENJAMBRE *Enj);
-void EvaluacionInicialEnjambre(ENJAMBRE *Enj);
-void ActualizarVelocidad(ENJAMBRE *Enj);
-void ActualizarPosicion(ENJAMBRE *Enj);
-void ActualizarMejoresPosiciones(ENJAMBRE *Enj);
-float FuncionObjetivo(float *Xi, unsigned int Np);
-
 int main(){
-  ENJAMBRE *Enj;
+  ENJAMBRE *Enj=NULL;
   //srand((unsigned) time(&tx));
   srand(time(NULL));
   unsigned int t=0;
   //Crear un enjambre de NumeroParticulas de Numero de parametros igual a Dimension
-  Enj=CrearEnjambre(NumeroParticulas,Dimension);
+  printf("\nAntes del ENJAMBRE");
+  CrearEnjambre(Enj,NumeroParticulas,Dimension);
   printf("\nSe creo el ENJAMBRE (IW)");
-  InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
+  /*InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
   EvaluacionInicialEnjambre(Enj);
   ImprimeEnjambre(Enj);
-  while(t<Enj->MaximoDeIteraciones)
-  { //printf("\nIteracion: %i",t);
+  while(t<Enj->MaximoDeIteraciones){
+    printf("\nIteracion: %i",t);
     ActualizarVelocidad(Enj);
     ActualizarPosicion(Enj);
     EvaluarEnjambre(Enj);
@@ -44,7 +33,7 @@ int main(){
   }
   printf("\nBest Particle:");
   ImprimeParticula(Enj,Enj->MejorParticulaDelGrupo);
-  EliminarEnjambre(Enj);
+  EliminarEnjambre(Enj);*/
   printf("\nSe elimino el ENJAMBRE");
   return 0;
 }
