@@ -34,16 +34,16 @@ typedef struct {
 // Cada solución es repensada según los valores históricos
 // y valores presentes.
 typedef struct{
-  PARTICULA *Part;                          // Partículas
-  unsigned int CantidadDeParticulas;        // Número de partículas
-  unsigned int CantidadDeParametros;        // Número de parámetros del problema
-  unsigned int MejorParticulaDelGrupo;      // ID de la mejor partícula del grupo
-  unsigned int CantidadDeIteracionesMaxima; // Número máximo d'iteraciones a realizar
-  float C1;                                 // Valor de peso C1
-  float C2;                                 // Valor de peso C2
-  const float *LimitesSuperiores;           // Limites Superiores
-  const float *LimitesInferiores;           // Limites Inferiores
-  float X;                                  // Factor de constricción (convergencia)
+  PARTICULA *Part;                      // Partículas
+  unsigned int CantidadDeParticulas;    // Número de partículas
+  unsigned int CantidadDeParametros;    // Número de parámetros del problema
+  unsigned int MejorParticulaDelGrupo;  // ID de la mejor partícula del grupo
+  unsigned int MaximoDeIteraciones;     // Número máximo d'iteraciones a realizar
+  float C1;                             // Valor de peso C1
+  float C2;                             // Valor de peso C2
+  const float *LimitesSuperiores;       // Limites Superiores
+  const float *LimitesInferiores;       // Limites Inferiores
+  float X;                              // Factor de constricción (convergencia)
 }ENJAMBRE;
 
 
@@ -65,7 +65,7 @@ void InicializarEnjambre(
     float        __FactorConstriccion__,
     float        __ValorDePeso_C1__,
     float        __ValorDePeso_C2__,
-    unsigned int __MaximoDeIteraciones,
+    unsigned int __MaximoDeIteraciones__,
     const float *__LimitesInferiores__,
     const float *__LimitesSuperiores__
   );
@@ -119,4 +119,4 @@ float FuncionObjetivo(
     unsigned int    __CantidadDeParametros__
   );
 
-#endif __pso__header__
+#endif
