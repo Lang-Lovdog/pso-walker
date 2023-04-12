@@ -2,7 +2,11 @@
 
 // Definición d'as funciones
 
-void CrearEnjambre(ENJAMBRE* __Enjambre__,unsigned int __CantidadDeParticulas__,unsigned int __CantidadDeParametros__){
+ENJAMBRE* CrearEnjambre(
+    //ENJAMBRE* __Enjambre__,
+    unsigned int __CantidadDeParticulas__,
+    unsigned int __CantidadDeParametros__
+  ){
   ENJAMBRE *ptr=NULL;
   //Reservar la memoria para la estructura del enjambre
   ptr=(ENJAMBRE *)malloc(sizeof(ENJAMBRE));
@@ -26,7 +30,7 @@ void CrearEnjambre(ENJAMBRE* __Enjambre__,unsigned int __CantidadDeParticulas__,
     ptr->Part[i].Vi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
     ptr->Part[i].Pi=(float *)malloc(__CantidadDeParametros__*sizeof(float));
   }
-  __Enjambre__=ptr;
+  return ptr;
 }
 
 
@@ -39,6 +43,7 @@ void InicializarEnjambre(
     const float *__LimitesInferiores__,
     const float *__LimitesSuperiores__
 ){
+  if(__Enjambre__){
   float aux,rango;
   __Enjambre__->X                      = __FactorConstriccion__;
   __Enjambre__->C1                     = __ValorDePeso_C1__;
@@ -56,6 +61,7 @@ void InicializarEnjambre(
       __Enjambre__->Part[i].Vi[j]=0;
       __Enjambre__->Part[i].Pi[j]=aux;
     }
+  }
 }
 
 

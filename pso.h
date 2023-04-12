@@ -4,8 +4,6 @@
 // Cabeceras necesarias para el proyecto
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
-#include<time.h>
 
 // Definición de la estructura Patícula
 // Esta partícula representa a un individuo
@@ -52,8 +50,8 @@ typedef struct{
 /* Creador de enjambres:
  * Recibe el número de partículas y el número de parámetros
  * (variables del problema)*/
-void CrearEnjambre(
-    ENJAMBRE     *__Enjambre__,
+ENJAMBRE* CrearEnjambre(
+    //ENJAMBRE     *__Enjambre__,
     unsigned int  __CantidadDeParticulas__,
     unsigned int  __CantidadDeParametros__
   );

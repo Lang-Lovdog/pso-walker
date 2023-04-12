@@ -1,4 +1,7 @@
 #include "pso.h"
+#include<math.h>
+#include<time.h>
+
 //PARAMETROS DE CONFIGURACION DEL PSO
 #define DIM_ 2
 const unsigned int NumeroParticulas=100; //Tamaño del enjambre, numero de particulas del enjambre
@@ -14,10 +17,10 @@ int main(){
   unsigned int t=0;
   //Crear un enjambre de NumeroParticulas de Numero de parametros igual a Dimension
   printf("\nAntes del ENJAMBRE");
-  CrearEnjambre(Enj,NumeroParticulas,Dimension);
+  Enj=CrearEnjambre(NumeroParticulas,Dimension);
   printf("\nSe creo el ENJAMBRE (IW)");
-  /*InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
-  EvaluacionInicialEnjambre(Enj);
+  InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
+  //EvaluacionInicialEnjambre(Enj);
   ImprimeEnjambre(Enj);
   while(t<Enj->MaximoDeIteraciones){
     printf("\nIteracion: %i",t);
@@ -33,7 +36,7 @@ int main(){
   }
   printf("\nBest Particle:");
   ImprimeParticula(Enj,Enj->MejorParticulaDelGrupo);
-  EliminarEnjambre(Enj);*/
+  EliminarEnjambre(Enj);
   printf("\nSe elimino el ENJAMBRE");
   return 0;
 }
