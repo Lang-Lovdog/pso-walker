@@ -29,6 +29,9 @@ void CrearMapa(
     MAPA *__Mapa__,
     const float __tamanno__
   );
+void EliminarMapa(
+    MAPA *__Mapa__
+  );
 void AgregaNodoMapa(
     MAPA *__Mapa__,
     const float* __Nodo__,

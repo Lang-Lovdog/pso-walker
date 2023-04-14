@@ -25,10 +25,43 @@ int main (void){
   AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
   const float Velocidad=0.75;
 
-  ImprimirMapa(&CaminoOrigen);
+  ImprimirMapa(&CaminoOrigen,&Velocidad);
+  ImprimirMapa(&Camino,&Velocidad);
+  EliminarMapa(&CaminoOrigen);
+  EliminarMapa(&Camino);
 }
 
 
+void ImprimirMapa(
+    const MAPA  *__Mapa__,
+    const float *__ParametrosDeOperacion__
+  ){
+  printf("(  X  ,  Y  :    W  ,  d  ,  t  )\t   SW  \t   Sd  \t   St  \n\n");
+  unsigned int k=0;
+  float sumaPesos=0,sumaDistantets=0,sumaVelocidad=0;
+  float coordenadas[4];
+  coordenadas[0]=*(__Mapa__->CoordenadaX);
+  coordenadas[1]=*(__Mapa__->CoordenadaY);
+  while(*(__Mapa__->PesoDelNodo+k)!=-3){
+    coordenadas[2]=*(__Mapa__->CoordenadaX+k);
+    coordenadas[3]=*(__Mapa__->CoordenadaY+k);
+    printf("(%.2f,%.2f:  %.2f,%.2f,%.2f)\t %.2f\t %.2f\t %.2f\n",
+      coordenadas[2],
+      coordenadas[3],
+      *(__Mapa__->PesoDelNodo+k),
+      v_distancia(coordenadas,coordenadas+2),
+      v_distancia(coordenadas,coordenadas+2)*(*__ParametrosDeOperacion__),
+      sumaPesos+=*(__Mapa__->PesoDelNodo+k),
+      sumaDistantets+=v_distancia(coordenadas,coordenadas+2),
+      sumaVelocidad+=v_distancia(coordenadas,coordenadas+2)*(*__ParametrosDeOperacion__)
+    );
+    if(*(__Mapa__->PesoDelNodo+k)==-2) break;
+    coordenadas[0]=coordenadas[2];
+    coordenadas[1]=coordenadas[3];
+    ++k;
+  }
+  printf("\n\n");
+}
 
 
 PARTICULA ProcesoPSO(

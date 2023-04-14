@@ -29,6 +29,9 @@ void CrearMapa(
     MAPA *__Mapa__,
     const float __tamanno__
   );
+void EliminarMapa(
+    MAPA *__Mapa__
+  );
 void AgregaNodoMapa(
     MAPA *__Mapa__,
     const float* __Nodo__,
@@ -42,15 +45,18 @@ void AgregaNodoMapaXY(
   );
 // Utilidad de Impresión de mapa
 void ImprimirMapa(
-    const MAPA *__Mapa__
+    const MAPA *__Mapa__,
+    const float *__ParametrosDeOperacion__
   );
 // Utilidad de Impresión de caminante
 void ImprimirCaminante(
-    const CAMINANTE* __Caminante__
+    const CAMINANTE* __Caminante__,
+    const float *__ParametrosDeOperacion__
   );
 // Utilidad de Impresión de tirolesa
 void ImprimirTirolesa(
-    const TIROLESA* __Tirolesa__
+    const TIROLESA* __Tirolesa__,
+    const float *__ParametrosDeOperacion__
   );
 
 

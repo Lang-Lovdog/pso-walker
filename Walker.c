@@ -28,7 +28,22 @@ void CrearMapa(
     *(__Mapa__->CoordenadaX+k)=
       *(__Mapa__->CoordenadaY+k)=0;
     *(__Mapa__->PesoDelNodo+k)=-3; // Nodo no utilizado en -3
+    ++k;
   };
+}
+
+void EliminarMapa(
+    MAPA *__Mapa__
+){
+  if(__Mapa__->CoordenadaX)
+    free(__Mapa__->CoordenadaX);
+  __Mapa__->CoordenadaX=NULL;
+  if(__Mapa__->CoordenadaY)
+    free(__Mapa__->CoordenadaY);
+  __Mapa__->CoordenadaY=NULL;
+  if(__Mapa__->PesoDelNodo)
+    free(__Mapa__->PesoDelNodo);
+  __Mapa__->PesoDelNodo=NULL;
 }
 
 void AgregaNodoMapa(
@@ -80,8 +95,12 @@ float v_distancia(
 ){
   unsigned int k=0;
   float suma=0;
-  while(k<2)
-    suma=pow(*(__A__+k)-*(__B__+k),2);
+  while(k<2){
+    //printf("(%.2f-%.2f)**2+",*(__A__+k),*(__B__+k));
+    suma+=pow(*(__A__+k)-*(__B__+k),2);
+    ++k;
+  }
+  //printf("\b= %.2f\n",suma);
   return sqrt(suma);
 }
 
