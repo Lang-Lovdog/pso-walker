@@ -1,6 +1,10 @@
 #include "pso.h"
+#include "Walker.h"
+// Cabeceras necesarias para el proyecto
 #include<math.h>
 #include<time.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 //InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
 //PARAMETROS DE CONFIGURACION DEL PSO
@@ -10,7 +14,6 @@ const unsigned int Dimension=DIM_; //Numero de variables del problema o dimensio
 const float LimiteSuperior[DIM_]={ 5.12,  5.12};
 const float LimiteInferior[DIM_]={-5.12, -5.12};
 const unsigned int NumeroMaximoDeIteraciones=300;*/
-float v_distancia(float* __A__,float* __B__);
 
 PARTICULA ProcesoPSO(
     const float         NumeroDeParticulas,
@@ -28,7 +31,7 @@ PARTICULA ProcesoPSO(
   srand(time(NULL));
   unsigned int t=0;
   //Crear un enjambre de NumeroParticulas de Numero de parametros igual a Dimension
-  Enj=CrearEnjambre(NumeroParticulas,Dimension);
+  Enj=CrearEnjambre(NumeroDeParticulas,Dimension);
   InicializarEnjambre(
       Enj,
       FactorDeConstriccion,
@@ -38,11 +41,11 @@ PARTICULA ProcesoPSO(
       LimiteInferior,
       LimiteSuperior
     );
-  EvaluacionInicialEnjambre(Enj);
+  EvaluacionInicialEnjambre(Enj,ParametrosDeOperacion);
   while((t++)<Enj->MaximoDeIteraciones){
     ActualizarVelocidad(Enj);
     ActualizarPosicion(Enj);
-    EvaluarEnjambre(Enj);
+    EvaluarEnjambre(Enj,ParametrosDeOperacion);
     ActualizarMejoresPosiciones(Enj);
   }
   ImprimeParticula(Enj,Enj->MejorParticulaDelGrupo);
@@ -62,29 +65,20 @@ PARTICULA ProcesoPSO(
 
 
 float FuncionObjetivo(
-    float        *__ValoresDeParametros__,
-    unsigned int  __CantidadDeParametros__,
-    const float  *__ParametrosDeOperacion__
+    float        *__ValoresDeParametros__,  // D'a partícula
+    unsigned int  __CantidadDeParametros__, // [3]{X,Y,W}
+    const float  *__ParametrosDeOperacion__ // [5]{Xref,Yref,Vel,Xcaminante,Ycaminante}
   ){
-  unsigned int k=0;
-  float fit, aux = 0;
-  // Funcion Rastriging (Buscamos el valor 0)
-  while((k++)<__CantidadDeParametros__)
-    aux += pow(__ValoresDeParametros__[k]-__ParametrosDeOperacion__[k],2);
-  // z = G/(sqrt(aux)(1+1/V)); V=80km/h;
-  // Los parámetros 1 y 2 son (X,Y)
-  // El parámetro 3 es Velociadad
-  // El parámetro 4 es el peso del nodo
-  // Los parámetros 5 y 6 corresponderán al punto actual
-  fit=sqrt(aux); // Se calcula según el radio de separación en x e y,
-                 // menor el radio, mejor la partícula
+  float fit;
+  // z = G/(dist(Pi,Prefi)+Vel*dist(Pi,Pcaminante)); V=80km/h;
+  fit=*(__ValoresDeParametros__+2)/(
+    v_distancia(__ValoresDeParametros__,__ParametrosDeOperacion__) +
+    *(__ParametrosDeOperacion__+2) *(
+      v_distancia(
+        __ParametrosDeOperacion__+3,
+        __ValoresDeParametros__
+      )
+    )
+  );
   return fit;
-}
-
-float v_distancia(float* __A__, float* __B__){
-  unsigned int k=0;
-  floar suma;
-  while(k<2)
-    suma += pow(__A__[k]-__B__[k],2);
-  return sqrt(suma)
 }

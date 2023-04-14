@@ -99,7 +99,7 @@ void ImprimeEnjambre(ENJAMBRE *__Enjambre__)
 }
 
 
-void EvaluarEnjambre(ENJAMBRE *__Enjambre__, float* __ParametrosDeOperacion__){
+void EvaluarEnjambre(ENJAMBRE *__Enjambre__,const float* __ParametrosDeOperacion__){
   float BestFit;
   // Calcular el valor de Fitness de cada particula
   BestFit = FuncionObjetivo(
@@ -114,20 +114,22 @@ void EvaluarEnjambre(ENJAMBRE *__Enjambre__, float* __ParametrosDeOperacion__){
         __ParametrosDeOperacion__
       );
     // Almacena el indice de la mejor particula de todo en enjambre
-    if(__Enjambre__->Part[i].Xfit<BestFit){
+    if(__Enjambre__->Part[i].Xfit>BestFit){
       BestFit = __Enjambre__->Part[i].Xfit;
       __Enjambre__->MejorParticulaDelGrupo =i;
     }
   }
 }
 
-void EvaluacionInicialEnjambre(ENJAMBRE *__Enjambre__, float* ParametrosDeOperacion){
+void EvaluacionInicialEnjambre(ENJAMBRE *__Enjambre__,const float* __ParametrosDeOperacion__){
   if(__Enjambre__){
   float aux,BestFit;
   //Calcular el valor de fitness de cada Particula
   BestFit=FuncionObjetivo(
       __Enjambre__->Part[0].Xi,
-      __Enjambre__->CantidadDeParametros);
+      __Enjambre__->CantidadDeParametros,
+      __ParametrosDeOperacion__
+    );
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++){
     aux=FuncionObjetivo(
         __Enjambre__->Part[i].Xi,
@@ -137,7 +139,7 @@ void EvaluacionInicialEnjambre(ENJAMBRE *__Enjambre__, float* ParametrosDeOperac
     __Enjambre__->Part[i].Xfit=aux;
     __Enjambre__->Part[i].Pfit=aux;
     //Almacena el indice de la mejor particula de todo el enjambre
-    if(aux<BestFit){
+    if(aux>BestFit){
       BestFit=aux;
       __Enjambre__->MejorParticulaDelGrupo=i;
     }

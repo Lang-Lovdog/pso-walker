@@ -1,10 +1,6 @@
 #ifndef __pso__header__
 #define __pso__header__
 
-// Cabeceras necesarias para el proyecto
-#include<stdio.h>
-#include<stdlib.h>
-
 // Definición de la estructura Patícula
 // Esta partícula representa a un individuo
 // El individuo buscará tener la mejor posición
@@ -87,14 +83,14 @@ void ImprimeEnjambre(
 /* Permite valorar al enjambre, según los criterios del PSO
  * y de la función objetivo*/
 void EvaluarEnjambre(
-    ENJAMBRE *__Enjambre__,
-    const float  ParametrosDeOperacion
+    ENJAMBRE    *__Enjambre__,
+    const float *__ParametrosDeOperacion__
   );
 /* Similar a EvaluarEnjambre, con la particularidad de que Inicializa
  * los valores de Mejor Posicion Historica, de las particulas*/
 void EvaluacionInicialEnjambre(
-    ENJAMBRE *__Enjambre__,
-    const float  ParametrosDeOperacion
+    ENJAMBRE    *__Enjambre__,
+    const float *__ParametrosDeOperacion__
   );
 /* Renueva la valocidad basado en los vectores de
  * Posición Actual,
