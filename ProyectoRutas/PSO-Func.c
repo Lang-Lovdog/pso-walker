@@ -15,7 +15,17 @@ const unsigned int NumeroMaximoDeIteraciones=300;
 
 int main (void){
   MAPA CaminoOrigen, Camino; 
-  Crea
+  CrearMapa(&CaminoOrigen,6);
+  CrearMapa(&Camino,6);
+  AgregaNodoMapaXY(&CaminoOrigen, 0  , 0  , -1 );
+  AgregaNodoMapaXY(&CaminoOrigen, 1  , 1  , 0.1);
+  AgregaNodoMapaXY(&CaminoOrigen, 1.5, 2  , 15 );
+  AgregaNodoMapaXY(&CaminoOrigen, 2  , 1  , 0.1);
+  AgregaNodoMapaXY(&CaminoOrigen, 2.5, 2.5, 15 );
+  AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
+  const float Velocidad=0.75;
+
+  ImprimirMapa(&CaminoOrigen);
 }
 
 

@@ -34,12 +34,24 @@ void AgregaNodoMapa(
     const float* __Nodo__,
     const float  __Peso__
   );
+void AgregaNodoMapaXY(
+    MAPA *__Mapa__,
+    const float __X__,
+    const float __Y__,
+    const float __Peso__
+  );
 // Utilidad de Impresión de mapa
-void ImprimirMapa(const MAPA *__Mapa__);
+void ImprimirMapa(
+    const MAPA *__Mapa__
+  );
 // Utilidad de Impresión de caminante
-void ImprimirCaminante(const CAMINANTE* __Caminante__);
+void ImprimirCaminante(
+    const CAMINANTE* __Caminante__
+  );
 // Utilidad de Impresión de tirolesa
-void ImprimirTirolesa(const TIROLESA* __Tirolesa__);
+void ImprimirTirolesa(
+    const TIROLESA* __Tirolesa__
+  );
 
 
 // Utilidad para pasar de 2 *x *y arreglos a un arreglo *xy

@@ -43,6 +43,19 @@ void AgregaNodoMapa(
   *(__Mapa__->CoordenadaY+k)=*(__Nodo__+1);
 }
 
+void AgregaNodoMapaXY(
+    MAPA *__Mapa__,
+    const float __X__,
+    const float __Y__,
+    const float __Peso__
+){
+  unsigned int k=0;
+  while(*(__Mapa__->PesoDelNodo+k)!=-3) ++k;
+  *(__Mapa__->PesoDelNodo+k)=__Peso__;
+  *(__Mapa__->CoordenadaX+k)=__X__;
+  *(__Mapa__->CoordenadaY+k)=__Y__;
+}
+
 float *f221(
     const float        *__A__,
     const float        *__B__,
