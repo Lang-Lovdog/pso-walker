@@ -13,6 +13,14 @@ const unsigned int NumeroParticulas=100; //Tamaño del enjambre, numero de parti
 const unsigned int Dimension=DIM_; //Numero de variables del problema o dimension del problema.
 const unsigned int NumeroMaximoDeIteraciones=300;
 
+int main (void){
+  MAPA CaminoOrigen, Camino; 
+  Crea
+}
+
+
+
+
 PARTICULA ProcesoPSO(
     const float         NumeroDeParticulas,
     const float         Dimension,
