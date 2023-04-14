@@ -13,14 +13,15 @@ typedef struct{
 // La tirolesa, definida por 1 valor y 2 vectoes: Pendiente d'a
 // rectoa, Coordenada X y Coordenada Y de Prefi
 typedef struct{
-  float  PendienteDaRecta;
-  float *Coordenadas_Pref;
-  char   AvanceX;
+  float PendienteDaRecta;
+  float Coordenadas_Pref[2];
+  char  AvanceX;
 }TIROLESA;
 // El caminante, sólo guarda un vector con las coordenadas X,Y
 typedef struct{
-  float *Coordenadas_Pcaminante;
-  float  Velocidad; // unidad sobre tiempo (Inversa multiplicativa d'a velocidad)
+  float Coordenadas_Pcaminante[2];
+  float PesoAcumulado;
+  float Velocidad; // unidad sobre tiempo (Inversa multiplicativa d'a velocidad)
 }CAMINANTE;
 // Utilidad para pasar de 2 *x *y arreglos a un arreglo *xy
 // Usar siempre a través d'un apuntador que permita la
@@ -51,7 +52,6 @@ float pendiente(
   );
 // Posiciona'l punto referencia
 void AvanzaPref(
-    const float *__PuntoActual__,
     TIROLESA    *__tirolesa__
   );
 // Posiciona'l caminante
