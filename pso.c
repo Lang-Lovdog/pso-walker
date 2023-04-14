@@ -1,4 +1,6 @@
 #include "pso.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 // Definición d'as funciones
 

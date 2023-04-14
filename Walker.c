@@ -1,7 +1,47 @@
 #include "Walker.h"
 #include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
 
+
+void CrearMapa(
+    MAPA *__Mapa__,
+    const float __tamanno__
+){
+  __Mapa__->CoordenadaX=(float*)malloc(__tamanno__*sizeof(float));
+  if(!__Mapa__->CoordenadaX){
+    printf("Error En creación de CoordenadaX");
+    exit(-11);
+  }
+  __Mapa__->CoordenadaY=(float*)malloc(__tamanno__*sizeof(float));
+  if(!__Mapa__->CoordenadaY){
+    printf("Error En creación de CoordenadaY");
+    exit(-12);
+  }
+  __Mapa__->PesoDelNodo=(float*)malloc(__tamanno__*sizeof(float));
+  if(!__Mapa__->PesoDelNodo){
+    printf("Error En creación de peso del nodo");
+    exit(-13);
+  }
+  unsigned int k=0;
+  while(k<__tamanno__){
+    *(__Mapa__->CoordenadaX+k)=
+      *(__Mapa__->CoordenadaY+k)=0;
+    *(__Mapa__->PesoDelNodo+k)=-3; // Nodo no utilizado en -3
+  };
+}
+
+void AgregaNodoMapa(
+    MAPA *__Mapa__,
+    const float* __Nodo__,
+    const float  __Peso__
+){
+  unsigned int k=0;
+  while(*(__Mapa__->PesoDelNodo+k)!=-3) ++k;
+  *(__Mapa__->PesoDelNodo+k)=__Peso__;
+  *(__Mapa__->CoordenadaX+k)=*(__Nodo__);
+  *(__Mapa__->CoordenadaY+k)=*(__Nodo__+1);
+}
 
 float *f221(
     const float        *__A__,
