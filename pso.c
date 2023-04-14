@@ -99,31 +99,45 @@ void ImprimeEnjambre(ENJAMBRE *__Enjambre__)
 }
 
 
-void EvaluarEnjambre(ENJAMBRE *__Enjambre__){
+void EvaluarEnjambre(ENJAMBRE *__Enjambre__, float* __ParametrosDeOperacion__){
   float BestFit;
   // Calcular el valor de Fitness de cada particula
-  BestFit = FuncionObjetivo(__Enjambre__->Part[0].Xi, __Enjambre__->CantidadDeParametros);
+  BestFit = FuncionObjetivo(
+      __Enjambre__->Part[0].Xi,
+      __Enjambre__->CantidadDeParametros,
+      __ParametrosDeOperacion__
+    );
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++){
-    __Enjambre__->Part[i].Xfit = FuncionObjetivo(__Enjambre__->Part[i].Xi, __Enjambre__->CantidadDeParametros);
+    __Enjambre__->Part[i].Xfit = FuncionObjetivo(
+        __Enjambre__->Part[i].Xi,
+        __Enjambre__->CantidadDeParametros,
+        __ParametrosDeOperacion__
+      );
     // Almacena el indice de la mejor particula de todo en enjambre
-    if(__Enjambre__->Part[i].Xfit>BestFit){
+    if(__Enjambre__->Part[i].Xfit<BestFit){
       BestFit = __Enjambre__->Part[i].Xfit;
       __Enjambre__->MejorParticulaDelGrupo =i;
     }
   }
 }
 
-void EvaluacionInicialEnjambre(ENJAMBRE *__Enjambre__){
+void EvaluacionInicialEnjambre(ENJAMBRE *__Enjambre__, float* ParametrosDeOperacion){
   if(__Enjambre__){
   float aux,BestFit;
   //Calcular el valor de fitness de cada Particula
-  BestFit=FuncionObjetivo(__Enjambre__->Part[0].Xi, __Enjambre__->CantidadDeParametros);
+  BestFit=FuncionObjetivo(
+      __Enjambre__->Part[0].Xi,
+      __Enjambre__->CantidadDeParametros);
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++){
-    aux=FuncionObjetivo(__Enjambre__->Part[i].Xi, __Enjambre__->CantidadDeParametros);
+    aux=FuncionObjetivo(
+        __Enjambre__->Part[i].Xi,
+        __Enjambre__->CantidadDeParametros,
+        __ParametrosDeOperacion__
+      );
     __Enjambre__->Part[i].Xfit=aux;
     __Enjambre__->Part[i].Pfit=aux;
     //Almacena el indice de la mejor particula de todo el enjambre
-    if(aux>BestFit){
+    if(aux<BestFit){
       BestFit=aux;
       __Enjambre__->MejorParticulaDelGrupo=i;
     }

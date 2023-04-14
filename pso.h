@@ -87,12 +87,14 @@ void ImprimeEnjambre(
 /* Permite valorar al enjambre, según los criterios del PSO
  * y de la función objetivo*/
 void EvaluarEnjambre(
-    ENJAMBRE *__Enjambre__
+    ENJAMBRE *__Enjambre__,
+    const float  ParametrosDeOperacion
   );
 /* Similar a EvaluarEnjambre, con la particularidad de que Inicializa
  * los valores de Mejor Posicion Historica, de las particulas*/
 void EvaluacionInicialEnjambre(
-    ENJAMBRE *__Enjambre__
+    ENJAMBRE *__Enjambre__,
+    const float  ParametrosDeOperacion
   );
 /* Renueva la valocidad basado en los vectores de
  * Posición Actual,
@@ -115,7 +117,20 @@ void ActualizarMejoresPosiciones(
 /* La función a evaluar, regresa el valor de fitness (precisión)*/
 float FuncionObjetivo(
     float          *__ValoresDeParametros__,
-    unsigned int    __CantidadDeParametros__
+    unsigned int    __CantidadDeParametros__,
+    const float    *__ParametrosDeOperacion__
+  );
+
+PARTICULA ProcesoPSO(
+    const float        NumeroDeParticulas,
+    const float        Dimension,
+    const float       *LimiteSuperior,
+    const float       *LimiteInferior,
+    const unsigned int NumeroMaximoDeIteraciones,
+    const float        FactorDeConstriccion,
+    const float        ValorPesoC1,
+    const float        ValorPesoC2,
+    const float       *ParametrosDeOperacion
   );
 
 #endif
