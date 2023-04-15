@@ -109,7 +109,8 @@ void BuscaPuntosIF(
     const MAPA *__Mapa__,
     CAMINANTE  *__Caminante__,
     TIROLESA   *__tirolesa__,
-    const float __Paso__
+    const float __Paso__,
+    const float __Vel1__
   ){
   unsigned int k=0;
   float *F=NULL;
@@ -121,6 +122,7 @@ void BuscaPuntosIF(
   __Caminante__->Coordenadas_Pcaminante[1]=
     __tirolesa__->Coordenadas_Pref[1]=
       __Mapa__->CoordenadaY[k];
+  __Caminante__->PesoAcumulado=0;
   while(*(__Mapa__->PesoDelNodo+k)!=-2)
     ++k;
   __tirolesa__->PendienteDaRecta=
@@ -164,17 +166,19 @@ unsigned int* busqueda(
     ) ++contador;
     ++k;
   }
+  elementos= !contador?NULL:(unsigned int*)malloc(sizeof(unsigned int)*contador);
   k=0; contador=0;
-  elementos=(unsigned int*)malloc(sizeof(unsigned int)*contador);
-  while(__Mapa__->PesoDelNodo[k]!=-2){
-    if(
-      __Mapa__->CoordenadaX[k]<__Actual__+(__Paso__*(1.1)) &&
-      __Mapa__->CoordenadaX[k]>__Actual__
-    ){
-      elementos[contador]=k;
-      ++contador;
+  if(elementos){
+    while(__Mapa__->PesoDelNodo[k]!=-2){
+      if(
+        __Mapa__->CoordenadaX[k]<__Actual__+(__Paso__*(1.1)) &&
+        __Mapa__->CoordenadaX[k]>__Actual__
+      ){
+        elementos[contador]=k;
+        ++contador;
+      }
+      ++k;
     }
-    ++k;
   }
   return elementos;
 }

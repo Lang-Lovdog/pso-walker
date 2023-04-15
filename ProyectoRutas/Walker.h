@@ -41,7 +41,8 @@ void AgregaNodoMapaXY(
     MAPA *__Mapa__,
     const float __X__,
     const float __Y__,
-    const float __Peso__
+    const float __Peso__,
+    const float __Vel1__
   );
 // Utilidad de Impresión de mapa
 void ImprimirMapa(

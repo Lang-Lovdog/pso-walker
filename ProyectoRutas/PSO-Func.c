@@ -14,7 +14,12 @@ const unsigned int Dimension=DIM_; //Numero de variables del problema o dimensio
 const unsigned int NumeroMaximoDeIteraciones=300;
 
 int main (void){
-  MAPA CaminoOrigen, Camino; 
+  MAPA CaminoOrigen, Camino;
+  CAMINANTE Metro;
+  TIROLESA Referencia;
+
+  unsigned int* ElementosEncontrados;
+
   CrearMapa(&CaminoOrigen,6);
   CrearMapa(&Camino,6);
   AgregaNodoMapaXY(&CaminoOrigen, 0  , 0  , -1 );
@@ -23,14 +28,43 @@ int main (void){
   AgregaNodoMapaXY(&CaminoOrigen, 2  , 1  , 0.1);
   AgregaNodoMapaXY(&CaminoOrigen, 2.5, 2.5, 15 );
   AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
-  const float Velocidad=0.75;
-
-  ImprimirMapa(&CaminoOrigen,&Velocidad);
-  ImprimirMapa(&Camino,&Velocidad);
+  BuscaPuntosIF(&CaminoOrigen,&Metro,&Referencia,0.5,0.75);
+  ImprimirCaminante(&Metro,NULL);
+  ImprimirTirolesa(&Referencia,NULL);
+  ImprimirMapa(&CaminoOrigen,&Metro.Velocidad);
+  AvanzaPref(&Referencia); 
+   
+  ImprimirTirolesa(&Referencia,NULL);
+  ImprimirMapa(&Camino,&Metro.Velocidad);
   EliminarMapa(&CaminoOrigen);
   EliminarMapa(&Camino);
 }
 
+void ImprimirTirolesa(
+    const TIROLESA* __Tirolesa__,
+    const float*    __ParametrosDeOperacion__
+  ){
+  printf("\n\nm=%.2f\nPrefi=(%.2f, %.2f:  %.2f)\n\n",
+    __Tirolesa__->PendienteDaRecta,
+    *(__Tirolesa__->Coordenadas_Pref),
+    *(__Tirolesa__->Coordenadas_Pref+1),
+    __Tirolesa__->Paso
+  );
+}
+
+void ImprimirCaminante(
+    const CAMINANTE* __Caminante__,
+    const float*     __ParametrosDeOperacion__
+  ){
+  printf("(  X  ,  Y  :    W  ,  V^(-1)  )\n\n");
+  printf("(%.2f,%.2f:  %.2f,%.2f)",
+    *(__Caminante__->Coordenadas_Pcaminante),
+    *(__Caminante__->Coordenadas_Pcaminante+1),
+    __Caminante__->PesoAcumulado,
+    __Caminante__->Velocidad
+  );
+  printf("\n");
+}
 
 void ImprimirMapa(
     const MAPA  *__Mapa__,
@@ -45,7 +79,7 @@ void ImprimirMapa(
   while(*(__Mapa__->PesoDelNodo+k)!=-3){
     coordenadas[2]=*(__Mapa__->CoordenadaX+k);
     coordenadas[3]=*(__Mapa__->CoordenadaY+k);
-    printf("(%.2f,%.2f:  %.2f,%.2f,%.2f)\t %.2f\t %.2f\t %.2f\n",
+    printf("(%.2f, %.2f:  %.2f, %.2f, %.2f)\t %.2f\t %.2f\t %.2f\n",
       coordenadas[2],
       coordenadas[3],
       *(__Mapa__->PesoDelNodo+k),
@@ -60,7 +94,7 @@ void ImprimirMapa(
     coordenadas[1]=coordenadas[3];
     ++k;
   }
-  printf("\n\n");
+  printf("\n");
 }
 
 
