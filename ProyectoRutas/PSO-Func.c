@@ -72,7 +72,7 @@ void Procesamiento(const MAPA* __Mapa__,CAMINANTE* __Caminante__,TIROLESA* __Tir
 
   AvanzaPref(__Tirolesa__);
   CantidadDelementosEncontrados=
-    busqueda(*(__Tirolesa__->Coordenadas_Pref),__Tirolesa__->Paso,__Mapa__,&ElementosEncontrados);
+    busqueda(*(__Caminante__->Coordenadas_Pcaminante),__Tirolesa__->Paso,__Mapa__,&ElementosEncontrados);
   if (ElementosEncontrados) {
     k=0;
     while (k<CantidadDelementosEncontrados) {
