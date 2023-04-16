@@ -18,7 +18,7 @@ void CrearMapa(
     printf("Error En creación de CoordenadaY");
     exit(-12);
   }
-  __Mapa__->PesoDelNodo=(float*)malloc(__tamanno__*sizeof(float));
+  __Mapa__->PesoDelNodo=(float*)malloc((__tamanno__+1)*sizeof(float));
   if(!__Mapa__->PesoDelNodo){
     printf("Error En creación de peso del nodo");
     exit(-13);
@@ -30,6 +30,7 @@ void CrearMapa(
     *(__Mapa__->PesoDelNodo+k)=-3; // Nodo no utilizado en -3
     ++k;
   };
+  *(__Mapa__->PesoDelNodo+k)=-4;
 }
 
 void EliminarMapa(
@@ -52,7 +53,9 @@ void AgregaNodoMapa(
     const float  __Peso__
 ){
   unsigned int k=0;
-  while(*(__Mapa__->PesoDelNodo+k)!=-3) ++k;
+  while(*(__Mapa__->PesoDelNodo+k)!=-3)
+    if(*(__Mapa__->PesoDelNodo+k)==-4) return;
+    else ++k;
   *(__Mapa__->PesoDelNodo+k)=__Peso__;
   *(__Mapa__->CoordenadaX+k)=*(__Nodo__);
   *(__Mapa__->CoordenadaY+k)=*(__Nodo__+1);
@@ -69,6 +72,20 @@ void AgregaNodoMapaXY(
   *(__Mapa__->PesoDelNodo+k)=__Peso__;
   *(__Mapa__->CoordenadaX+k)=__X__;
   *(__Mapa__->CoordenadaY+k)=__Y__;
+}
+
+float* LimitesMapa(const MAPA* __Mapa__){
+  unsigned int k=0;
+  float max[3]={0,0,0};
+  float* Limites=(float*)malloc(3*sizeof(float));
+  while (*(__Mapa__->PesoDelNodo+k)!=-3&&*(__Mapa__->PesoDelNodo+k)!=-4) {
+    if(*( max ) < *(__Mapa__->CoordenadaX+k)) *( max )=*(__Mapa__->CoordenadaX+k);
+    if(*(max+1) < *(__Mapa__->CoordenadaY+k)) *(max+1)=*(__Mapa__->CoordenadaY+k);
+    if(*(max+2) < *(__Mapa__->PesoDelNodo+k)) *(max+2)=*(__Mapa__->PesoDelNodo+k);
+    ++k;
+  }
+  *(Limites)=*(max); *(Limites+1)=*(max+1); *(Limites+2)=*(max+2);
+  return Limites;
 }
 
 float *f221(
@@ -114,6 +131,7 @@ void BuscaPuntosIF(
   ){
   unsigned int k=0;
   float *F=NULL;
+  __Caminante__->Velocidad=__Vel1__;
   while(*(__Mapa__->PesoDelNodo+k)!=-1)
     ++k;
   __Caminante__->Coordenadas_Pcaminante[0]=
@@ -150,14 +168,16 @@ void AvanzaCaminante(
 ){
   __Caminante__->Coordenadas_Pcaminante[0]=__NuevoPunto__[0];
   __Caminante__->Coordenadas_Pcaminante[1]=__NuevoPunto__[1];
+  __Caminante__->PesoAcumulado+=__NuevoPunto__[2];
 }
 
-unsigned int* busqueda(
-    const float  __Actual__,
-    const float  __Paso__,
-    const MAPA  *__Mapa__
+unsigned int busqueda(
+    const float    __Actual__,
+    const float    __Paso__,
+    const MAPA*    __Mapa__,
+    unsigned int** __ElementosEncontrados__
 ){
-  unsigned int k, contador, *elementos;
+  unsigned int k,l, contador, *elementos;
   k=contador=0; elementos=NULL;
   while(__Mapa__->PesoDelNodo[k]!=-2){
     if(
@@ -167,27 +187,28 @@ unsigned int* busqueda(
     ++k;
   }
   elementos= !contador?NULL:(unsigned int*)malloc(sizeof(unsigned int)*contador);
-  k=0; contador=0;
+  k=0; l=0;
   if(elementos){
     while(__Mapa__->PesoDelNodo[k]!=-2){
       if(
         __Mapa__->CoordenadaX[k]<__Actual__+(__Paso__*(1.1)) &&
         __Mapa__->CoordenadaX[k]>__Actual__
       ){
-        elementos[contador]=k;
-        ++contador;
+        elementos[l]=k;
+        ++l;
       }
       ++k;
     }
   }
-  return elementos;
+  *__ElementosEncontrados__=elementos;
+  return contador;
 }
-// Comparación de puntos con seleccionado
+// Comparación de punos, entre más similares, menor el valor de salida
 float precision(
     const float* __A__,
     const float  __WA__,
     const float* __B__,
     const float  __WB__
 ){
-  return (0.8*v_distancia(__A__,__B__)+1.4*(__WB__-__WA__))/2;
+  return (fabs(v_distancia(__A__,__B__))+fabs(__WA__-__WB__))/2;
 }

@@ -21,6 +21,7 @@ typedef struct{
 typedef struct{
   float Coordenadas_Pcaminante[2];
   float PesoAcumulado;
+  float PesoActual;
   float Velocidad; // unidad sobre tiempo (Inversa multiplicativa d'a velocidad)
 }CAMINANTE;
 
@@ -41,8 +42,7 @@ void AgregaNodoMapaXY(
     MAPA *__Mapa__,
     const float __X__,
     const float __Y__,
-    const float __Peso__,
-    const float __Vel1__
+    const float __Peso__
   );
 // Utilidad de Impresión de mapa
 void ImprimirMapa(
@@ -60,6 +60,8 @@ void ImprimirTirolesa(
     const float *__ParametrosDeOperacion__
   );
 
+// Utilidad que permita encontrar los límites de un mapa
+float* LimitesMapa(const MAPA* __Mapa__);
 
 // Utilidad para pasar de 2 *x *y arreglos a un arreglo *xy
 // Usar siempre a través d'un apuntador que permita la
@@ -87,7 +89,8 @@ void BuscaPuntosIF(
     const MAPA *__Mapa__,
     CAMINANTE  *__Caminante__,
     TIROLESA   *__tirolesa__,
-    const float __Paso__
+    const float __Paso__,
+    const float __Vel1__
   );
 // Posiciona'l punto referencia
 void AvanzaPref(
@@ -99,10 +102,11 @@ void AvanzaCaminante(
     CAMINANTE   *__Caminante__
   );
 // Busqueda de puntos en rango
-unsigned int* busqueda(
-    const float  __Actual__,
-    const float __Paso__,
-    const MAPA* __Mapa__
+unsigned int busqueda(
+    const float    __Actual__,
+    const float    __Paso__,
+    const MAPA*    __Mapa__,
+    unsigned int** __ElementosEncontrados__
   );
 // Comparación de puntos con seleccionado
 float precision(

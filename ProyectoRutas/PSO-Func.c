@@ -1,44 +1,174 @@
-#include "pso.h"
-#include "Walker.h"
+#include "../pso.h"
+#include "../Walker.h"
 // Cabeceras necesarias para el proyecto
-#include<math.h>
+#include <math.h>
 #include<time.h>
 #include<stdio.h>
 #include<stdlib.h>
 
-//InicializarEnjambre(Enj, 0.72984,2.05,2.05,NumeroMaximoDeIteraciones,LimiteInferior,LimiteSuperior);
-//PARAMETROS DE CONFIGURACION DEL PSO
-#define DIM_ 2
-const unsigned int NumeroParticulas=100; //Tamaño del enjambre, numero de particulas del enjambre
-const unsigned int Dimension=DIM_; //Numero de variables del problema o dimension del problema.
-const unsigned int NumeroMaximoDeIteraciones=300;
+void Procesamiento(const MAPA *,CAMINANTE*,TIROLESA*);
 
 int main (void){
-  MAPA CaminoOrigen, Camino;
+  MAPA CaminoOrigen, RutaSeleccionada;
   CAMINANTE Metro;
   TIROLESA Referencia;
+  float* Final=NULL;
 
-  unsigned int* ElementosEncontrados;
+  /*________________________________________________________________________________*/
 
   CrearMapa(&CaminoOrigen,6);
-  CrearMapa(&Camino,6);
+  CrearMapa(&RutaSeleccionada,6);
   AgregaNodoMapaXY(&CaminoOrigen, 0  , 0  , -1 );
   AgregaNodoMapaXY(&CaminoOrigen, 1  , 1  , 0.1);
   AgregaNodoMapaXY(&CaminoOrigen, 1.5, 2  , 15 );
   AgregaNodoMapaXY(&CaminoOrigen, 2  , 1  , 0.1);
   AgregaNodoMapaXY(&CaminoOrigen, 2.5, 2.5, 15 );
   AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
-  BuscaPuntosIF(&CaminoOrigen,&Metro,&Referencia,0.5,0.75);
+  Final=f221(CaminoOrigen.CoordenadaX,CaminoOrigen.CoordenadaY,5);
+
+  /*________________________________________________________________________________*/
+
+  BuscaPuntosIF(&CaminoOrigen,&Metro,&Referencia,1,0.75);
+  Metro.Velocidad=0.75;
+
+  /*________________________________________________________________________________*/
+
   ImprimirCaminante(&Metro,NULL);
   ImprimirTirolesa(&Referencia,NULL);
   ImprimirMapa(&CaminoOrigen,&Metro.Velocidad);
-  AvanzaPref(&Referencia); 
-   
-  ImprimirTirolesa(&Referencia,NULL);
-  ImprimirMapa(&Camino,&Metro.Velocidad);
+ 
+  while(precision(Final, 0, Metro.Coordenadas_Pcaminante,0)){
+    Procesamiento(&CaminoOrigen, &Metro, &Referencia);
+    AgregaNodoMapaXY(
+      &RutaSeleccionada,
+      *( Metro.Coordenadas_Pcaminante ),
+      *(Metro.Coordenadas_Pcaminante+1),
+      Metro.PesoActual
+    );
+  }
+  Metro.PesoAcumulado+=2;
+
+  //ImprimirTirolesa(&Referencia,NULL);
+  ImprimirMapa(&RutaSeleccionada,NULL);
   EliminarMapa(&CaminoOrigen);
+  EliminarMapa(&RutaSeleccionada);
+}
+
+  /*________________________________________________________________________________*/
+
+void Procesamiento(const MAPA* __Mapa__,CAMINANTE* __Caminante__,TIROLESA* __Tirolesa__){
+  MAPA Camino;
+  PARTICULA SELECTA;
+  CrearMapa(&Camino,6);
+  unsigned int CantidadDelementosEncontrados,*ElementosEncontrados=NULL;
+  unsigned int k;
+  float Parametros[5];
+  float *LimitesSuperiores, LimitesInferiores[3];
+  float* cooF=NULL;
+  float MaximaPrecision, mpaux;
+  unsigned int PuntoSeleccionado;
+
+  /*________________________________________________________________________________*/
+
+  AvanzaPref(__Tirolesa__);
+  CantidadDelementosEncontrados=
+    busqueda(*(__Tirolesa__->Coordenadas_Pref),__Tirolesa__->Paso,__Mapa__,&ElementosEncontrados);
+  if (ElementosEncontrados) {
+    k=0;
+    while (k<CantidadDelementosEncontrados) {
+      AgregaNodoMapaXY(
+        &Camino,
+        *(__Mapa__->CoordenadaX+*(ElementosEncontrados+k)),
+        *(__Mapa__->CoordenadaY+*(ElementosEncontrados+k)),
+        *(__Mapa__->PesoDelNodo+*(ElementosEncontrados+k))
+      );
+      ++k;
+    }
+    printf("Posibles caminos:\n");
+    ImprimirMapa(&Camino,&__Caminante__->Velocidad);
+    
+    // Llenado d'os parámetros d'operación
+    // Es un vector de 5 elementos:
+    // [5]{Xref,Yref,Vel,Xcaminante,Ycaminante} 
+    *( Parametros )=*(__Tirolesa__->Coordenadas_Pref);
+    *(Parametros+1)=*(__Tirolesa__->Coordenadas_Pref+1);
+    *(Parametros+2)=  __Caminante__->Velocidad;
+    *(Parametros+3)=*(__Caminante__->Coordenadas_Pcaminante);
+    *(Parametros+4)=*(__Caminante__->Coordenadas_Pcaminante+1);
+    // Limites
+    // Será un vector de 4 elementos
+    // [4]{LimiteSuperiorX,LimiteSuperiorY,LimiteInferiorX,LimiteInferiorY}
+    // Los límites serán dados por valores en xy más altos d'os puntos encontrados
+    *( LimitesInferiores )=*(__Caminante__->Coordenadas_Pcaminante)+(0.1*__Tirolesa__->Paso);
+    *(LimitesInferiores+1)=0;
+    *(LimitesInferiores+2)=0;
+    LimitesSuperiores=LimitesMapa(__Mapa__);
+    printf("\n\nLimitesSuperiores: (%.2f, %.2f, %.2f)\n",*(LimitesSuperiores),*(LimitesSuperiores+1),*(LimitesSuperiores+2));
+    printf("LimitesSuperiores: (%.2f, %.2f, %.2f)\n",*(LimitesInferiores),*(LimitesInferiores+1),*(LimitesInferiores+2));
+
+  /*________________________________________________________________________________*/
+
+    SELECTA=
+    ProcesoPSO(
+      5, 3,
+      LimitesSuperiores, LimitesInferiores,
+      12, 0.72, 2.5, 2.5,
+      Parametros
+    );
+
+    printf("\nPunto Ideal (x,y,w) = (%.2f, %.2f, %.2f) con una precisión de %f\n\n",
+      *( SELECTA.Xi ),
+      *(SELECTA.Xi+1),
+      *(SELECTA.Xi+2),
+      SELECTA.Xfit
+    );
+
+    /*________________________________________________________________________________*/
+
+    k=0;
+    MaximaPrecision=
+    precision(
+      SELECTA.Xi,
+      *(SELECTA.Xi+2),
+      cooF=f221(__Mapa__->CoordenadaX,__Mapa__->CoordenadaY,*(ElementosEncontrados+k)),
+      *(__Mapa__->PesoDelNodo+*(ElementosEncontrados+k))
+    );
+    PuntoSeleccionado=*(ElementosEncontrados+k);
+    free(cooF);
+    ++k;
+    while (k<CantidadDelementosEncontrados) {
+      mpaux=precision(
+        SELECTA.Xi,
+        *(SELECTA.Xi+2),
+        cooF=f221(__Mapa__->CoordenadaX,__Mapa__->CoordenadaY,*(ElementosEncontrados+k)),
+        *(__Mapa__->PesoDelNodo+*(ElementosEncontrados+k))
+      );
+      if(MaximaPrecision>mpaux){
+        PuntoSeleccionado=*(ElementosEncontrados+k);
+        MaximaPrecision=mpaux;
+      }
+      free(cooF);
+      ++k;
+    }
+    AvanzaCaminante(
+      f221(
+        __Mapa__->CoordenadaX,
+        __Mapa__->CoordenadaY,
+        PuntoSeleccionado
+      ),
+      __Caminante__
+    );
+    __Caminante__->PesoAcumulado+=__Caminante__->PesoActual=*(__Mapa__->PesoDelNodo+PuntoSeleccionado);
+    printf("Punto Seleccionado: ");
+    ImprimirCaminante(__Caminante__,NULL);
+    // Liberación de memoria
+    free(LimitesSuperiores);
+    free(ElementosEncontrados);
+  }
   EliminarMapa(&Camino);
 }
+
+
 
 void ImprimirTirolesa(
     const TIROLESA* __Tirolesa__,
@@ -56,10 +186,11 @@ void ImprimirCaminante(
     const CAMINANTE* __Caminante__,
     const float*     __ParametrosDeOperacion__
   ){
-  printf("(  X  ,  Y  :    W  ,  V^(-1)  )\n\n");
-  printf("(%.2f,%.2f:  %.2f,%.2f)",
+  printf("(  X  ,  Y  :    W  ,  SW  ,  V^(-1)  )= ");
+  printf("(%.2f,%.2f:  %.2f ,%.2f, %.2f)",
     *(__Caminante__->Coordenadas_Pcaminante),
     *(__Caminante__->Coordenadas_Pcaminante+1),
+    __Caminante__->PesoActual,
     __Caminante__->PesoAcumulado,
     __Caminante__->Velocidad
   );
@@ -116,22 +247,24 @@ PARTICULA ProcesoPSO(
   //Crear un enjambre de NumeroParticulas de Numero de parametros igual a Dimension
   Enj=CrearEnjambre(NumeroDeParticulas,Dimension);
   InicializarEnjambre(
-      Enj,
-      FactorDeConstriccion,
-      ValorPesoC1,
-      ValorPesoC2,
-      NumeroMaximoDeIteraciones,
-      LimiteInferior,
-      LimiteSuperior
-    );
+    Enj,
+    FactorDeConstriccion,
+    ValorPesoC1,
+    ValorPesoC2,
+    NumeroMaximoDeIteraciones,
+    LimiteInferior,
+    LimiteSuperior
+  );
+  //ImprimeEnjambre(Enj);
   EvaluacionInicialEnjambre(Enj,ParametrosDeOperacion);
   while((t++)<Enj->MaximoDeIteraciones){
     ActualizarVelocidad(Enj);
     ActualizarPosicion(Enj);
     EvaluarEnjambre(Enj,ParametrosDeOperacion);
     ActualizarMejoresPosiciones(Enj);
+    //ImprimeEnjambre(Enj);
   }
-  ImprimeParticula(Enj,Enj->MejorParticulaDelGrupo);
+  //ImprimeParticula(Enj,Enj->MejorParticulaDelGrupo);
 
   Particle.Xi=(Enj->Part+Enj->MejorParticulaDelGrupo)->Xi;
   (Enj->Part+Enj->MejorParticulaDelGrupo)->Xi=NULL;
