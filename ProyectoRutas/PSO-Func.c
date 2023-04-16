@@ -25,6 +25,7 @@ int main (void){
   AgregaNodoMapaXY(&CaminoOrigen, 2.5, 2.5, 15 );
   AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
   Final=f221(CaminoOrigen.CoordenadaX,CaminoOrigen.CoordenadaY,5);
+  AgregaNodoMapaXY(&RutaSeleccionada, 0  , 0  , 0 );
 
   /*________________________________________________________________________________*/
 
@@ -36,20 +37,33 @@ int main (void){
   ImprimirCaminante(&Metro,NULL);
   ImprimirTirolesa(&Referencia,NULL);
   ImprimirMapa(&CaminoOrigen,&Metro.Velocidad);
+  ImprimirMapa(&RutaSeleccionada,&Metro.Velocidad);
  
   while(precision(Final, 0, Metro.Coordenadas_Pcaminante,0)){
+    if(*(Referencia.Coordenadas_Pref)+Referencia.Paso>*(Final)){
+      AgregaNodoMapaXY(
+        &RutaSeleccionada,
+        *( Final ),
+        *(Final+1),
+        0
+      );
+      break;
+    }
     Procesamiento(&CaminoOrigen, &Metro, &Referencia);
-    AgregaNodoMapaXY(
+    AgregaNodoMapa(
       &RutaSeleccionada,
-      *( Metro.Coordenadas_Pcaminante ),
-      *(Metro.Coordenadas_Pcaminante+1),
+      Metro.Coordenadas_Pcaminante,
       Metro.PesoActual
     );
+
+    *( Referencia.Coordenadas_Pref )=*( Metro.Coordenadas_Pcaminante );
+    *(Referencia.Coordenadas_Pref+1)=*(Metro.Coordenadas_Pcaminante+1);
   }
   Metro.PesoAcumulado+=2;
 
   //ImprimirTirolesa(&Referencia,NULL);
-  ImprimirMapa(&RutaSeleccionada,NULL);
+  printf("Ruta seleccionada:\n");
+  ImprimirMapa(&RutaSeleccionada,&Metro.Velocidad);
   EliminarMapa(&CaminoOrigen);
   EliminarMapa(&RutaSeleccionada);
 }

@@ -59,6 +59,7 @@ void AgregaNodoMapa(
   *(__Mapa__->PesoDelNodo+k)=__Peso__;
   *(__Mapa__->CoordenadaX+k)=*(__Nodo__);
   *(__Mapa__->CoordenadaY+k)=*(__Nodo__+1);
+  ImprimirMapa(__Mapa__,NULL);
 }
 
 void AgregaNodoMapaXY(
