@@ -8,7 +8,7 @@
 
 void Procesamiento(const MAPA *,CAMINANTE*,TIROLESA*);
 
-int main (void){
+int main (int __main_CantidadDeArgumentos__, char** __main_ArgumentosDaFuncion__){
   MAPA CaminoOrigen, RutaSeleccionada;
   CAMINANTE Metro;
   TIROLESA Referencia;
@@ -16,19 +16,28 @@ int main (void){
 
   /*________________________________________________________________________________*/
 
-  CrearMapa(&CaminoOrigen,6);
-  CrearMapa(&RutaSeleccionada,6);
-  AgregaNodoMapaXY(&CaminoOrigen, 0  , 0  , -1 );
-  AgregaNodoMapaXY(&CaminoOrigen, 1  , 1  , 0.1);
-  AgregaNodoMapaXY(&CaminoOrigen, 1.5, 2  , 15 );
-  AgregaNodoMapaXY(&CaminoOrigen, 2  , 1  , 0.1);
-  AgregaNodoMapaXY(&CaminoOrigen, 2.5, 2.5, 15 );
-  AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
+  if(__main_CantidadDeArgumentos__<2){
+    CrearMapa(&CaminoOrigen,6);
+    CrearMapa(&RutaSeleccionada,6);
+    AgregaNodoMapaXY(&CaminoOrigen, 0  , 0  , -1 );
+    AgregaNodoMapaXY(&CaminoOrigen, 1  , 1  , 0.1);
+    AgregaNodoMapaXY(&CaminoOrigen, 1.5, 2  , 15 );
+    AgregaNodoMapaXY(&CaminoOrigen, 2  , 1  , 0.1);
+    AgregaNodoMapaXY(&CaminoOrigen, 2.5, 2.5, 15 );
+    AgregaNodoMapaXY(&CaminoOrigen, 3  , 3  , -2 );
+  }else {
+    printf("%s\n\n",*(__main_ArgumentosDaFuncion__+1));
+    CrearMapa(
+      &RutaSeleccionada,
+      ArchivoMapa(*(__main_ArgumentosDaFuncion__+1),&CaminoOrigen)
+    );
+    if(*CaminoOrigen.PesoDelNodo==-4){ printf("Sin archivo o sin datos\n"); exit(1);}
+  }
   Final=f221(CaminoOrigen.CoordenadaX,CaminoOrigen.CoordenadaY,5);
-  AgregaNodoMapaXY(&RutaSeleccionada, 0  , 0  , 0 );
+  AgregaNodoMapaXY(&RutaSeleccionada, *CaminoOrigen.CoordenadaX , *CaminoOrigen.CoordenadaY , 0 );
 
   /*________________________________________________________________________________*/
-
+  
   BuscaPuntosIF(&CaminoOrigen,&Metro,&Referencia,1,0.75);
   Metro.Velocidad=0.75;
 
@@ -61,9 +70,13 @@ int main (void){
   }
   Metro.PesoAcumulado+=2;
 
-  //ImprimirTirolesa(&Referencia,NULL);
   printf("Ruta seleccionada:\n");
   ImprimirMapa(&RutaSeleccionada,&Metro.Velocidad);
+
+  printf("Puntos propuestos:\n");
+  PlotMapa(&CaminoOrigen,'p');
+  printf("Mejor Camino:\n");
+  PlotMapa(&RutaSeleccionada,'l');
   EliminarMapa(&CaminoOrigen);
   EliminarMapa(&RutaSeleccionada);
 }
@@ -164,12 +177,13 @@ void Procesamiento(const MAPA* __Mapa__,CAMINANTE* __Caminante__,TIROLESA* __Tir
       free(cooF);
       ++k;
     }
+    float CoordenadasPeso[3]={
+       *(__Mapa__->CoordenadaX+PuntoSeleccionado),
+       *(__Mapa__->CoordenadaY+PuntoSeleccionado),
+       *(__Mapa__->PesoDelNodo+PuntoSeleccionado)
+    };
     AvanzaCaminante(
-      f221(
-        __Mapa__->CoordenadaX,
-        __Mapa__->CoordenadaY,
-        PuntoSeleccionado
-      ),
+      CoordenadasPeso,
       __Caminante__
     );
     __Caminante__->PesoAcumulado+=__Caminante__->PesoActual=*(__Mapa__->PesoDelNodo+PuntoSeleccionado);
@@ -221,7 +235,7 @@ void ImprimirMapa(
   float coordenadas[4];
   coordenadas[0]=*(__Mapa__->CoordenadaX);
   coordenadas[1]=*(__Mapa__->CoordenadaY);
-  while(*(__Mapa__->PesoDelNodo+k)!=-3){
+  while(*(__Mapa__->PesoDelNodo+k)!=-3 && *(__Mapa__->PesoDelNodo+k)!=-4){
     coordenadas[2]=*(__Mapa__->CoordenadaX+k);
     coordenadas[3]=*(__Mapa__->CoordenadaY+k);
     printf("(%.2f, %.2f:  %.2f, %.2f, %.2f)\t %.2f\t %.2f\t %.2f\n",
@@ -234,12 +248,36 @@ void ImprimirMapa(
       sumaDistantets+=v_distancia(coordenadas,coordenadas+2),
       sumaVelocidad+=v_distancia(coordenadas,coordenadas+2)*(*__ParametrosDeOperacion__)
     );
-    if(*(__Mapa__->PesoDelNodo+k)==-2) break;
     coordenadas[0]=coordenadas[2];
     coordenadas[1]=coordenadas[3];
     ++k;
   }
   printf("\n");
+}
+
+void PlotMapa(
+    const MAPA *__Mapa__,
+    const char  __Type__
+){
+  FILE* Salida=fopen("TemporalPlot","w");
+  float *LimitesDaGrafica;
+  unsigned int k=0;
+  while(*(__Mapa__->PesoDelNodo+k)!=-3 && *(__Mapa__->PesoDelNodo+k)!=-4){
+    fprintf(Salida,"%f %f\n",*(__Mapa__->CoordenadaX+k),*(__Mapa__->CoordenadaY+k));
+    ++k;
+  }
+  LimitesDaGrafica=LimitesMapa(__Mapa__);
+  fclose(Salida);
+  Salida=popen("gnuplot -persistent","w");
+  fprintf(Salida,"set terminal dumb\n");
+  fprintf(Salida,"set xrange [-1:%f]\nset yrange [-1:%f]\n",*(LimitesDaGrafica)+1,*(LimitesDaGrafica+1)+1);
+  free(LimitesDaGrafica);
+  if(__Type__=='l'){
+    fprintf(Salida,"plot './TemporalPlot' with linespoints notitle\n");
+  }else{
+    fprintf(Salida,"plot './TemporalPlot' notitle\n");
+  }
+  pclose(Salida);
 }
 
 

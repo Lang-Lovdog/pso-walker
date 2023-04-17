@@ -4,19 +4,21 @@
 #include <stdio.h>
 
 
-void CrearMapa(
+void CrearMapa( // <Confirmado!>
     MAPA *__Mapa__,
     const float __tamanno__
 ){
-  __Mapa__->CoordenadaX=(float*)malloc(__tamanno__*sizeof(float));
-  if(!__Mapa__->CoordenadaX){
-    printf("Error En creación de CoordenadaX");
-    exit(-11);
-  }
-  __Mapa__->CoordenadaY=(float*)malloc(__tamanno__*sizeof(float));
-  if(!__Mapa__->CoordenadaY){
-    printf("Error En creación de CoordenadaY");
-    exit(-12);
+  if(__tamanno__>0){
+    __Mapa__->CoordenadaX=(float*)malloc(__tamanno__*sizeof(float));
+    if(!__Mapa__->CoordenadaX){
+      printf("Error En creación de CoordenadaX");
+      exit(-11);
+    }
+    __Mapa__->CoordenadaY=(float*)malloc(__tamanno__*sizeof(float));
+    if(!__Mapa__->CoordenadaY){
+      printf("Error En creación de CoordenadaY");
+      exit(-12);
+    }
   }
   __Mapa__->PesoDelNodo=(float*)malloc((__tamanno__+1)*sizeof(float));
   if(!__Mapa__->PesoDelNodo){
@@ -47,7 +49,7 @@ void EliminarMapa(
   __Mapa__->PesoDelNodo=NULL;
 }
 
-void AgregaNodoMapa(
+void AgregaNodoMapa( // <Confirmado!>
     MAPA *__Mapa__,
     const float* __Nodo__,
     const float  __Peso__
@@ -59,23 +61,50 @@ void AgregaNodoMapa(
   *(__Mapa__->PesoDelNodo+k)=__Peso__;
   *(__Mapa__->CoordenadaX+k)=*(__Nodo__);
   *(__Mapa__->CoordenadaY+k)=*(__Nodo__+1);
-  ImprimirMapa(__Mapa__,NULL);
 }
 
-void AgregaNodoMapaXY(
+void AgregaNodoMapaXY( // <Confirmado!>
     MAPA *__Mapa__,
     const float __X__,
     const float __Y__,
     const float __Peso__
 ){
   unsigned int k=0;
-  while(*(__Mapa__->PesoDelNodo+k)!=-3) ++k;
+  while(*(__Mapa__->PesoDelNodo+k)!=-3)
+    if(*(__Mapa__->PesoDelNodo+k)==-4) return;
+    else ++k;
   *(__Mapa__->PesoDelNodo+k)=__Peso__;
   *(__Mapa__->CoordenadaX+k)=__X__;
   *(__Mapa__->CoordenadaY+k)=__Y__;
 }
 
-float* LimitesMapa(const MAPA* __Mapa__){
+unsigned int ArchivoMapa( // <Confirmado!> 
+    const char* __Archivo__,
+    MAPA*       __Mapa__
+){
+  FILE* ElCamino;
+  char* Linea;
+  float Valores[3];
+  unsigned int CantidadDePuntos;
+  if((ElCamino=fopen(__Archivo__,"rt")))
+    fscanf(ElCamino,"%d\n",&CantidadDePuntos);
+  if(CantidadDePuntos){
+    //printf("CantidadDePuntos: %d",CantidadDePuntos);
+    CrearMapa(__Mapa__,CantidadDePuntos);
+    while(fscanf(ElCamino,"%f,%f,%f\n",Valores,Valores+1,Valores+2)!=EOF){
+      AgregaNodoMapa(__Mapa__, Valores, *(Valores+2));
+     //printf("%f,%f,%f\n",*Valores,*(Valores+1),*(Valores+2));
+    }
+    //float vel=1;
+    //ImprimirMapa(__Mapa__,&vel);
+    fclose(ElCamino);
+  }else CrearMapa(__Mapa__,CantidadDePuntos=0);
+  return CantidadDePuntos;
+}
+
+float* LimitesMapa( // <Confirmado!>
+    const MAPA* __Mapa__
+){
   unsigned int k=0;
   float max[3]={0,0,0};
   float* Limites=(float*)malloc(3*sizeof(float));
@@ -89,7 +118,7 @@ float* LimitesMapa(const MAPA* __Mapa__){
   return Limites;
 }
 
-float *f221(
+float *f221( // <Confirmado!>
     const float        *__A__,
     const float        *__B__,
     const unsigned int  __ID__
@@ -100,14 +129,14 @@ float *f221(
   return NeuVar;
 }
 
-float pendiente(
+float pendiente( // <Confirmado!>
     const float *__A__,
     const float *__B__
 ){
   return (__B__[1]-__A__[1])/(__B__[0]-__A__[0]);
 }
 
-float v_distancia(
+float v_distancia( // <Confirmado!>
     const float* __A__,
     const float* __B__
 ){
@@ -123,27 +152,29 @@ float v_distancia(
 }
 
 
-void BuscaPuntosIF(
+void BuscaPuntosIF( // <Confirmado!>
     const MAPA *__Mapa__,
     CAMINANTE  *__Caminante__,
     TIROLESA   *__tirolesa__,
     const float __Paso__,
     const float __Vel1__
-  ){
+){
   unsigned int k=0;
   float *F=NULL;
+  /*-----------------------------------------------------*/
   __Caminante__->Velocidad=__Vel1__;
-  while(*(__Mapa__->PesoDelNodo+k)!=-1)
-    ++k;
+  __Caminante__->PesoAcumulado=__Caminante__->PesoActual=0;
+  __tirolesa__->Paso=__Paso__;
+  /*-----------------------------------------------------*/
+  while(*(__Mapa__->PesoDelNodo+k)!=-1) ++k;
   __Caminante__->Coordenadas_Pcaminante[0]=
-    __tirolesa__->Coordenadas_Pref[0]=
-      __Mapa__->CoordenadaX[k];
+  __tirolesa__->Coordenadas_Pref[0]=
+    __Mapa__->CoordenadaX[k];
   __Caminante__->Coordenadas_Pcaminante[1]=
-    __tirolesa__->Coordenadas_Pref[1]=
-      __Mapa__->CoordenadaY[k];
-  __Caminante__->PesoAcumulado=0;
-  while(*(__Mapa__->PesoDelNodo+k)!=-2)
-    ++k;
+  __tirolesa__->Coordenadas_Pref[1]=
+    __Mapa__->CoordenadaY[k];
+  /*-----------------------------------------------------*/
+  while(*(__Mapa__->PesoDelNodo+k)!=-2) ++k;
   __tirolesa__->PendienteDaRecta=
     __tirolesa__->Coordenadas_Pref[0]!=__Mapa__->CoordenadaX[k]?
     pendiente(
@@ -151,7 +182,7 @@ void BuscaPuntosIF(
       F=f221(__Mapa__->CoordenadaX,__Mapa__->CoordenadaY,k)
     ):0;
   free(F);
-  __tirolesa__->Paso=__Paso__;
+  /*-----------------------------------------------------*/
 }
 
 void AvanzaPref(
@@ -169,7 +200,7 @@ void AvanzaCaminante(
 ){
   __Caminante__->Coordenadas_Pcaminante[0]=__NuevoPunto__[0];
   __Caminante__->Coordenadas_Pcaminante[1]=__NuevoPunto__[1];
-  __Caminante__->PesoAcumulado+=__NuevoPunto__[2];
+  __Caminante__->PesoAcumulado+=__Caminante__->PesoActual=__NuevoPunto__[2];
 }
 
 unsigned int busqueda(

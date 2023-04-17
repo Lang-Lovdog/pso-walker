@@ -44,6 +44,14 @@ void AgregaNodoMapaXY(
     const float __Y__,
     const float __Peso__
   );
+unsigned int ArchivoMapa(
+    const char* __Archivo__,
+    MAPA*       __Mapa__
+);
+void PlotMapa(
+    const MAPA *__Mapa__,
+    const char  __Type__
+  );
 // Utilidad de Impresión de mapa
 void ImprimirMapa(
     const MAPA *__Mapa__,
