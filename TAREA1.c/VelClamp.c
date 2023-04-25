@@ -6,7 +6,19 @@
 
 int main (void){
   //Programa que obtenga los valores
-
+  // Limites={InfX,InfY, SupX,SupY}
+  PARTICULA LaSelecta;
+  const float Limites[4]={-6.28,-6.28,6.28,6.28};
+  LaSelecta= ProcesoPSO(
+    12, 2,
+    Limites+2, Limites,
+    20, 0, 2, 2,
+    NULL
+  );
+  ImprimeParticula(&LaSelecta,2);
+  free(LaSelecta.Pi);
+  free(LaSelecta.Vi);
+  free(LaSelecta.Xi);
 }
 
   /*________________________________________________________________________________*/

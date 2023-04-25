@@ -81,7 +81,7 @@ void EliminarEnjambre(ENJAMBRE* __Enjambre__)
 }
 
 
-void ImprimeParticula(ENJAMBRE *__Enjambre__, unsigned int __ID_Particula__){
+void ImprimeParticulaID(ENJAMBRE *__Enjambre__, unsigned int __ID_Particula__){
   printf("\nP%i,Xi: ",__ID_Particula__);
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParametros; i++)
     printf("%f, ",__Enjambre__->Part[__ID_Particula__].Xi[i]);
@@ -95,9 +95,26 @@ void ImprimeParticula(ENJAMBRE *__Enjambre__, unsigned int __ID_Particula__){
   printf("\nP%i,Pfit=%f",__ID_Particula__,__Enjambre__->Part[__ID_Particula__].Pfit);
 }
 
+void ImprimeParticula(
+  const PARTICULA    *__Particula__,
+  const unsigned int  __CantidadDeParametros__
+){
+  printf("\nParticula:");
+  for(unsigned int i=0; i<__CantidadDeParametros__; i++)
+    printf("%f, ",__Particula__->Xi[i]);
+  printf("\nParticula Vi: ");
+  for(unsigned int i=0; i<__CantidadDeParametros__; i++)
+    printf("%f, ",__Particula__->Vi[i]);
+  printf("\nParticula,Pi: ");
+  for(unsigned int i=0; i<__CantidadDeParametros__; i++)
+    printf("%f, ",__Particula__->Pi[i]);
+  printf("\nParticula,Xfit=%f",__Particula__->Xfit);
+  printf("\nParticula,Pfit=%f",__Particula__->Pfit);
+}
+
 void ImprimeEnjambre(ENJAMBRE *__Enjambre__)
 { for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; ++i) //Para cada particula i
-    ImprimeParticula(__Enjambre__,i);
+    ImprimeParticulaID(__Enjambre__,i);
 }
 
 

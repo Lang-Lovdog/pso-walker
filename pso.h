@@ -71,9 +71,14 @@ void EliminarEnjambre(
     ENJAMBRE *__Enjambre__
   );
 /* Nos permite visualizar los parámetros de la partícula.*/
-void ImprimeParticula(
+void ImprimeParticulaID(
     ENJAMBRE     *__Enjambre__,
     unsigned int  __ID_Particula__
+  );
+/*Imprime la particula sin enjambre*/
+void ImprimeParticula(
+  const PARTICULA    *__Particula__,
+  const unsigned int  __CantidadDeParametros__
   );
 /* Permite visualizar los parámetros del enjambre, y las partículas
  * que le componen.*/
