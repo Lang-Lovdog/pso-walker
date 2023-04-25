@@ -58,7 +58,7 @@ void InicializarEnjambre(
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; ++i) //Para cada particula i
     for(unsigned int j=0; j<__Enjambre__->CantidadDeParametros; ++j) //Para cada parametro j de cada vector de la particula i
     { rango=__Enjambre__->LimitesSuperiores[j]-__Enjambre__->LimitesInferiores[j];
-      aux= ((float)rand()/RAND_MAX) * rango + __Enjambre__->LimitesInferiores[j];
+      aux= ((float)rand()/(float)RAND_MAX) * rango + __Enjambre__->LimitesInferiores[j];
       __Enjambre__->Part[i].Xi[j]=aux;
       __Enjambre__->Part[i].Vi[j]=0;
       __Enjambre__->Part[i].Pi[j]=aux;
@@ -89,8 +89,8 @@ void ImprimeParticula(ENJAMBRE *__Enjambre__, unsigned int __ID_Particula__){
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParametros; i++)
     printf("%f, ",__Enjambre__->Part[__ID_Particula__].Vi[i]);
   printf("\nP%i,Pi: ",__ID_Particula__);
-    for(unsigned int i=0; i<__Enjambre__->CantidadDeParametros; i++)
-  printf("%f, ",__Enjambre__->Part[__ID_Particula__].Pi[i]);
+  for(unsigned int i=0; i<__Enjambre__->CantidadDeParametros; i++)
+    printf("%f, ",__Enjambre__->Part[__ID_Particula__].Pi[i]);
   printf("\nP%i,Xfit=%f",__ID_Particula__,__Enjambre__->Part[__ID_Particula__].Xfit);
   printf("\nP%i,Pfit=%f",__ID_Particula__,__Enjambre__->Part[__ID_Particula__].Pfit);
 }

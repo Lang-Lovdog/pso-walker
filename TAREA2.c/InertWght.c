@@ -60,7 +60,7 @@ PARTICULA ProcesoPSO(
   EvaluacionInicialEnjambre(Enj,__ParametrosDeOperacion__);
 
   while((t++)<Enj->MaximoDeIteraciones){
-    ActualizarVelocidad(Enj);
+    ActualizarVelocidadInerciaW(Enj);
     ActualizarPosicion(Enj);
     EvaluarEnjambre(Enj,__ParametrosDeOperacion__);
     ActualizarMejoresPosiciones(Enj);
