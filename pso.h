@@ -113,23 +113,41 @@ void ActualizarPosicion(
 void ActualizarMejoresPosiciones(
     ENJAMBRE *__Enjambre__
   );
-/* La función a evaluar, regresa el valor de fitness (precisión)*/
+
+/* La función a evaluar, regresa el valor de fitness (precisión)
+ * Requiere ser definida para l'evaluación d'as partículas
+ * Valores De Parametros .... (arreglo float)
+ * Cantidad De Parametros ... (int)
+ * Parametros De Operacion .. (arreglo float)
+*/
 float FuncionObjetivo(
     float          *__ValoresDeParametros__,
     unsigned int    __CantidadDeParametros__,
     const float    *__ParametrosDeOperacion__
   );
 
+/* Funcion que se puede definir para realizar el procesamiento pso,
+ * puede ser ignorado o definido y consta d'os sig. elementos, en
+ * el orden en que se presentan a continuación:
+ * Numero De Particulas ................. (float)
+ * Dimension ............................ (float)
+ * Límites Superiores ................... (arreglo float)
+ * Límite Inferiores .................... (arreglo float)
+ * Numero Máximo De Iteraciones ......... (int)
+ * Factor De Constriccion O De Inercia .. (float)
+ * Valor Peso C1: Mejor Personal ........ (float)
+ * Valor Peso C2: Mejor Global .......... (float)
+ * Parametros De Operacion .............. (arreglo float) */
 PARTICULA ProcesoPSO(
-    const float        NumeroDeParticulas,
-    const float        Dimension,
-    const float       *LimiteSuperior,
-    const float       *LimiteInferior,
-    const unsigned int NumeroMaximoDeIteraciones,
-    const float        FactorDeConstriccion,
-    const float        ValorPesoC1,
-    const float        ValorPesoC2,
-    const float       *ParametrosDeOperacion
+    const float        __NumeroDeParticulas__,
+    const float        __Dimension__,
+    const float       *__LimiteSuperior__,
+    const float       *__LimiteInferior__,
+    const unsigned int __NumeroMaximoDeIteraciones__,
+    const float        __Factor_Constriccion_Inercia__,
+    const float        __ValorPesoPersonalC1__,
+    const float        __ValorPesoGlobalC2__,
+    const float       *__ParametrosDeOperacion__
   );
 
 #endif
