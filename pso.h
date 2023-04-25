@@ -99,6 +99,9 @@ void EvaluacionInicialEnjambre(
 void ActualizarVelocidad(
     ENJAMBRE *__Enjambre__
   );
+void ActualizarVelocidadInerciaW(
+    ENJAMBRE *__Enjambre__
+  );
 /* Suma los valores de velocidad a la posición actual de
  * cada partícula.*/
 void ActualizarPosicion(

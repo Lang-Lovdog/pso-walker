@@ -156,11 +156,29 @@ void ActualizarVelocidad(ENJAMBRE *__Enjambre__){
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++) //Para cada particula i
     for(unsigned int j=0; j<__Enjambre__->CantidadDeParametros; j++) //Para cada parametro j de cada vector Vi de la particula i
     {
-      Y1=(float)rand()/RAND_MAX;
-      Y2=(float)rand()/RAND_MAX;
-      __Enjambre__->Part[i].Vi[j] = __Enjambre__->X*((__Enjambre__->Part[i].Vi[j])+
-                                   (__Enjambre__->C1*Y1*(__Enjambre__->Part[i].Pi[j]-__Enjambre__->Part[i].Xi[j]))+
-                                   (__Enjambre__->C2*Y2*(__Enjambre__->Part[__Enjambre__->MejorParticulaDelGrupo].Pi[j]-__Enjambre__->Part[i].Xi[j])) );
+      Y1=(float)rand()/(float)RAND_MAX;
+      Y2=(float)rand()/(float)RAND_MAX;
+      __Enjambre__->Part[i].Vi[j] =(
+        __Enjambre__->Part[i].Vi[j]+
+        (__Enjambre__->C1*Y1*(__Enjambre__->Part[i].Pi[j]-__Enjambre__->Part[i].Xi[j]))+
+        (__Enjambre__->C2*Y2*(__Enjambre__->Part[__Enjambre__->MejorParticulaDelGrupo].Pi[j]-__Enjambre__->Part[i].Xi[j]))
+      );
+    }
+}
+
+void ActualizarVelocidadInerciaW(ENJAMBRE *__Enjambre__){
+  float Y1,Y2;
+  //Actualizar cada vector velocidad Vi de cada particula
+  for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++) //Para cada particula i
+    for(unsigned int j=0; j<__Enjambre__->CantidadDeParametros; j++) //Para cada parametro j de cada vector Vi de la particula i
+    {
+      Y1=(float)rand()/(float)RAND_MAX;
+      Y2=(float)rand()/(float)RAND_MAX;
+      __Enjambre__->Part[i].Vi[j] =(
+          (__Enjambre__->Part[i].Vi[j]*__Enjambre__->X)+
+        (__Enjambre__->C1*Y1*(__Enjambre__->Part[i].Pi[j]-__Enjambre__->Part[i].Xi[j]))+
+        (__Enjambre__->C2*Y2*(__Enjambre__->Part[__Enjambre__->MejorParticulaDelGrupo].Pi[j]-__Enjambre__->Part[i].Xi[j]))
+      );
     }
 }
 
