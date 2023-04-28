@@ -1,6 +1,6 @@
 PWD /home/lang_lovdog/Documentos/pso-walker/TAREA2.c/T02_IA_BrandonMarquezSalazar.TEX
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
-INPUT /usr/share/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /home/lang_lovdog/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt
 INPUT T02_IA_BrandonMarquezSalazar.tex
 OUTPUT T02_IA_BrandonMarquezSalazar.log
 INPUT /usr/share/texmf-dist/tex/latex/base/report.cls
