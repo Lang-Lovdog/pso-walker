@@ -14,17 +14,14 @@
 \newcommand{\espacio}{\vspace{1cm}}
 \newcommand{\Espacio}{\vspace{1.5cm}}
 \graphicspath{../../../../../}
-\lstset{literate=%
-  {á}{{\'a}}
-  {é}{{\'e}}
-  {í}{{\'i}}
-  {ó}{{\'o}}
-  {ú}{{\'u}}
-  {Á}{{\'a}}
-  {É}{{\'e}}
-  {Í}{{\'i}}
-  {Ó}{{\'o}}
-  {Ú}{{\'u}}
+\lstset{
+  inputencoding=utf8,
+  extendedchars=true,
+  literate= {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'a}}1 {É}{{\'e}}1 {Í}{{\'i}}1 {Ó}{{\'o}}1 {Ú}{{\'u}}1,
+  tabsize=2,
+  basicstyle=\footnotesize,
+  language=C,
+  breaklines=true,
 }
 
 \pagestyle{fancy}
@@ -69,7 +66,7 @@
 \Portada{  
   \begin{center}
     {\Large
-    \includegraphics[scale=0.8]{../../../../../escudo-linea-horizontal-png.png}\\
+    %\includegraphics[scale=0.8]{../../../../../escudo-linea-horizontal-png.png}\\
     \espacio
     División de Inenierías Campus Irapuato Salamanca \\
     Universidad de Guanajuato
@@ -118,7 +115,18 @@
   matemático), función proceso (que albergará'l proceso que llevará, desde la creación del enjambre, las evaluaciones,
   entre otros elementos del procesamiento, hasta su limpieza).
   \section*{Código utilizado}
+  \subsection*{Cabecera}
   \lstinputlisting[language=C++]{../../pso.h}
+  \subsection*{Definiciones}
+  \lstinputlisting[language=C++]{../../pso.c}
+  \subsection*{Programa principal, definición de modelo y proceso pso}
+  \lstinputlisting[language=C++]{../VelClamp.c}
   \section*{Pruebas y resultados}
+  \includegraphics[scale=0.45,trim= 0 7cm 38cm 0,clip]{../PruebasDelPrograma}
   \section*{Conclusión}
+  Se puede percibir la forma en que el método de partículas, dentro de la simplesa de su planteamiento matemático
+  y de la compejidad de su composición, permite un procesaamiento de esencialmentos, preveyendo d'elementos
+  estocásticos, los cuales permiten la generación de resultados en un amplio número de problemas; este método
+  exige smiplesa en el modelo matemático que se desea evaluar para evitar una carga fuerte en el procesador, debido
+  al número de evaluaciones que se realizan durante cada iteración según el número de partículas disparadas.
 \end{document}

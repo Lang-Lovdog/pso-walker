@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1682692086 "T01_IA_BrandonMarquezSalazar.tex" "T01_IA_BrandonMarquezSalazar.pdf" "T01_IA_BrandonMarquezSalazar" 1682692089
+["pdflatex"] 1682692418 "T02_IA_BrandonMarquezSalazar.tex" "T02_IA_BrandonMarquezSalazar.pdf" "T02_IA_BrandonMarquezSalazar" 1682692422
   "../../pso.c" 1682437404 8994 8703f50a3c41d31622b1beb6b0645e44 ""
   "../../pso.h" 1682437402 5957 bcf3394e2950a184e8d5087b2d4160a1 ""
-  "../PruebasDelPrograma.png" 1682691356 2713496 d5df63123b15a89dc80f1fc0db1b92f4 ""
-  "../VelClamp.c" 1682437625 2596 612ef0662cd70958c6e3c5bf8f8568d6 ""
+  "../InertWght.c" 1682437924 2604 b783573e381005829e4350e7ce6aa499 ""
+  "../PruebasDelPrograma.png" 1682692408 2702470 65a977be5a8ff7c335fd3e7d75df460f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1639192684 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1639192684 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1639192684 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -135,9 +135,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1680710935 39967 c1691bf11496e9d6ea53f7eba5c4754e ""
   "/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1682290138 334227 92f850e77170e97d49db3fab2645ba0e ""
   "/usr/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1682290121 2724588 400e623a6893fe27c520a8890a491458 ""
-  "T01_IA_BrandonMarquezSalazar.aux" 1682692089 2044 61da9f1206345068fdf25da1ac72307d "pdflatex"
-  "T01_IA_BrandonMarquezSalazar.tex" 1682692081 5638 42db0da68205c41b9ae3ef08b5173a07 ""
+  "T02_IA_BrandonMarquezSalazar.aux" 1682692421 2045 640d57888e91a5265f9892c0b7fdaec4 "pdflatex"
+  "T02_IA_BrandonMarquezSalazar.tex" 1682692383 5507 9ffec33e7d3cd5050ea158adebd714e6 ""
   (generated)
-  "T01_IA_BrandonMarquezSalazar.aux"
-  "T01_IA_BrandonMarquezSalazar.log"
-  "T01_IA_BrandonMarquezSalazar.pdf"
+  "T02_IA_BrandonMarquezSalazar.aux"
+  "T02_IA_BrandonMarquezSalazar.pdf"
+  "T02_IA_BrandonMarquezSalazar.log"

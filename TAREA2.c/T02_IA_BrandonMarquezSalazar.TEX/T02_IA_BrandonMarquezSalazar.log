@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2023.4.23)  28 APR 2023 08:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2023.4.23)  28 APR 2023 08:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**T01_IA_BrandonMarquezSalazar.tex
-(./T01_IA_BrandonMarquezSalazar.tex
+**T02_IA_BrandonMarquezSalazar.tex
+(./T02_IA_BrandonMarquezSalazar.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
@@ -358,11 +358,11 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box62
-) (./T01_IA_BrandonMarquezSalazar.aux
+) (./T02_IA_BrandonMarquezSalazar.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
-\openout1 = `T01_IA_BrandonMarquezSalazar.aux'.
+\openout1 = `T02_IA_BrandonMarquezSalazar.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
@@ -483,7 +483,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 219.
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 227.
-) (../VelClamp.c [11]
+) (../InertWght.c [11]
 Overfull \hbox (85.61244pt too wide) in paragraph at lines 24--26
 [][] 
  []
@@ -494,20 +494,20 @@ File: ../PruebasDelPrograma.png Graphic file (type png)
 <use ../PruebasDelPrograma.png>
 Package pdftex.def Info: ../PruebasDelPrograma.png  used on input line 125.
 (pdftex.def)             Requested size: 380.69437pt x 398.19266pt.
- [13] [14 <../PruebasDelPrograma.png>] [15] (./T01_IA_BrandonMarquezSalazar.aux
+ [13] [14 <../PruebasDelPrograma.png>] [15] (./T02_IA_BrandonMarquezSalazar.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 ) ) 
 Here is how much of TeX's memory you used:
  16203 strings out of 478994
- 308935 string characters out of 5864719
+ 308939 string characters out of 5864719
  1368007 words of memory out of 5000000
  33336 multiletter control sequences out of 15000+600000
  406920 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,12n,130p,520b,1960s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on T01_IA_BrandonMarquezSalazar.pdf (15 pages, 3018807 bytes).
+Output written on T02_IA_BrandonMarquezSalazar.pdf (15 pages, 3019186 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
