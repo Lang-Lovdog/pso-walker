@@ -38,6 +38,7 @@ typedef struct{
   const float *LimitesSuperiores;       // Limites Superiores
   const float *LimitesInferiores;       // Limites Inferiores
   float X;                              // Factor de constricción (convergencia)
+  float Constriccion;                   // Factor de constricción (convergencia)
 }ENJAMBRE;
 
 
@@ -105,6 +106,9 @@ void ActualizarVelocidad(
     ENJAMBRE *__Enjambre__
   );
 void ActualizarVelocidadInerciaW(
+    ENJAMBRE *__Enjambre__
+  );
+void ActualizarVelocidadConstriction(
     ENJAMBRE *__Enjambre__
   );
 /* Suma los valores de velocidad a la posición actual de

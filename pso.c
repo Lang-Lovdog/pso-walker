@@ -1,6 +1,7 @@
 #include "pso.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 // Definición d'as funciones
 
@@ -54,6 +55,9 @@ void InicializarEnjambre(
   __Enjambre__->MejorParticulaDelGrupo = 0;
   __Enjambre__->LimitesInferiores      = __LimitesInferiores__;
   __Enjambre__->LimitesSuperiores      = __LimitesSuperiores__;
+  //Dar constriccion uwu
+  float fi = __Enjambre__->C1+__Enjambre__->C2;
+  __Enjambre__->Constriccion=2/fabs(2-fi-sqrt(pow(fi,2)-(4*fi)));
   //Inicializar cada vector de cada particula
   for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; ++i) //Para cada particula i
     for(unsigned int j=0; j<__Enjambre__->CantidadDeParametros; ++j) //Para cada parametro j de cada vector de la particula i
@@ -196,6 +200,23 @@ void ActualizarVelocidadInerciaW(ENJAMBRE *__Enjambre__){
         (__Enjambre__->C1*Y1*(__Enjambre__->Part[i].Pi[j]-__Enjambre__->Part[i].Xi[j]))+
         (__Enjambre__->C2*Y2*(__Enjambre__->Part[__Enjambre__->MejorParticulaDelGrupo].Pi[j]-__Enjambre__->Part[i].Xi[j]))
       );
+    }
+}
+void ActualizarVelocidadConstriction(
+    ENJAMBRE *__Enjambre__
+){
+  float Y1,Y2;
+  //Actualizar cada vector velocidad Vi de cada particula
+  for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++) //Para cada particula i
+    for(unsigned int j=0; j<__Enjambre__->CantidadDeParametros; j++) //Para cada parametro j de cada vector Vi de la particula i
+    {
+      Y1=(float)rand()/(float)RAND_MAX;
+      Y2=(float)rand()/(float)RAND_MAX;
+      __Enjambre__->Part[i].Vi[j] =__Enjambre__->Constriccion*(
+          (__Enjambre__->Part[i].Vi[j]+
+        (__Enjambre__->C1*Y1*(__Enjambre__->Part[i].Pi[j]-__Enjambre__->Part[i].Xi[j]))+
+        (__Enjambre__->C2*Y2*(__Enjambre__->Part[__Enjambre__->MejorParticulaDelGrupo].Pi[j]-__Enjambre__->Part[i].Xi[j]))
+      ));
     }
 }
 
