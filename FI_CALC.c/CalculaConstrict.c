@@ -4,58 +4,39 @@
 #include <time.h>
 #include <stdlib.h>
 
-// The update function uses the maximum value, so, if we search for the minimum value,
-// then we need to invert the result of FuncionObjetivo.
-
-void FuncionObjetivoF(
-    float        *__ValoresDeParametros__,
-    unsigned int  __CantidadDeParametros__,
-    const float  *__ParametrosDeOperacion__,
-    unsigned int  __CantidadDeOperacion__,
-    const float *__ResultadoDeOperacion__
-);
-
 int main (void){
   //Programa que obtenga los valores
   // Limites={InfX,InfY, SupX,SupY}
   PARTICULA LaSelecta;
-  unsigned int Dimension=100,k=0;
-  float *LimitesInf=(float*)malloc(Dimension*sizeof(float));
-  float *LimitesSup=(float*)malloc(Dimension*sizeof(float));
-  while (k<Dimension) {
-    *(LimitesInf+k)=-10;
-    *(LimitesSup+k)=10;
-    ++k;
-  }
-
+  const float Limites[4]={2,2,3,3};
   LaSelecta= ProcesoPSO(
-    25, Dimension,
-    LimitesSup, LimitesInf,
-    20000, 0.6, 2.05, 2.05,
+    20, 2,
+    Limites+2, Limites,
+    12, 0, 2, 2,
     NULL
   );
   ImprimeParticula(&LaSelecta,2);
   free(LaSelecta.Pi);
   free(LaSelecta.Vi);
   free(LaSelecta.Xi);
-  free(LimitesInf);
-  free(LimitesSup);
 }
 
   /*________________________________________________________________________________*/
+
+void FuncionObjetivoF(
+    float        *__ValoresDeParametros__,
+    unsigned int  __CantidadDeParametros__,
+    float        *ResultadoDeOperacion
+  );
 
 float FuncionObjetivo(
     float        *__ValoresDeParametros__,
     unsigned int  __CantidadDeParametros__,
     const float  *__ParametrosDeOperacion__
 ){
-  float ResultadoDeOperacion=0;
-  FuncionObjetivoF(
-    __ValoresDeParametros__,__CantidadDeParametros__,
-    __ParametrosDeOperacion__,0,
-    &ResultadoDeOperacion
-  );
-  return ResultadoDeOperacion;
+  float f_xy;
+  FuncionObjetivoF(__ValoresDeParametros__,__CantidadDeParametros__,&f_xy);
+  return f_xy;
 }
 
 PARTICULA ProcesoPSO(
@@ -93,10 +74,10 @@ PARTICULA ProcesoPSO(
   EvaluacionInicialEnjambre(Enj,__ParametrosDeOperacion__);
 
   while((t++)<Enj->MaximoDeIteraciones){
-    ActualizarVelocidadConstriction(Enj);
+    ActualizarVelocidad(Enj);
     ActualizarPosicion(Enj);
-    EvaluarEnjambreMin(Enj,__ParametrosDeOperacion__);
-    ActualizarMejoresPosicionesMin(Enj);
+    EvaluarEnjambre(Enj,__ParametrosDeOperacion__);
+    ActualizarMejoresPosiciones(Enj);
   }
 
   Particle.Xi=(Enj->Part+Enj->MejorParticulaDelGrupo)->Xi;

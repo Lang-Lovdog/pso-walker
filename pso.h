@@ -88,7 +88,11 @@ void ImprimeEnjambre(
   );
 /* Permite valorar al enjambre, según los criterios del PSO
  * y de la función objetivo*/
-void EvaluarEnjambre(
+void EvaluarEnjambreMin(
+    ENJAMBRE    *__Enjambre__,
+    const float *__ParametrosDeOperacion__
+  );
+void EvaluarEnjambreMax(
     ENJAMBRE    *__Enjambre__,
     const float *__ParametrosDeOperacion__
   );
@@ -119,7 +123,10 @@ void ActualizarPosicion(
 /* Valora, en cada partícula, si el valor actual es mejor que'l mejor
  * valor histórico; si los valores actuales son mejores, actualiza
  * los parametros. */
-void ActualizarMejoresPosiciones(
+void ActualizarMejoresPosicionesMin(
+    ENJAMBRE *__Enjambre__
+  );
+void ActualizarMejoresPosicionesMax(
     ENJAMBRE *__Enjambre__
   );
 
