@@ -1,7 +1,9 @@
 a=0
 maximo=$1
 programa=$2
-archivo="Resultados_"$2"_"$1".txt"
+archivo="Resultados_"$2"_"$1".csv"
+
+echo "Local Best, Global Best" > $archivo
 
 while [ $a -lt $maximo ]
 do

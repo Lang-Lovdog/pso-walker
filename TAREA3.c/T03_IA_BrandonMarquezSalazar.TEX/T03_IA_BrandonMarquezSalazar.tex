@@ -8,24 +8,23 @@
 \usepackage[spanish]{babel}
 \usepackage{listings}
 \usepackage{tikz}
-\usepackage{eso-pic}
+\usepackage{csvsimple}
+\usepackage{atbegshi}
+%\usepackage[scale=1, opacity=1, angle=0]{background}
+\usepackage{pdfpages}
 \usetikzlibrary{positioning}
-\newcommand{\nuevap}{\newpage \Marco}
 \newcommand{\espacio}{\vspace{1cm}}
 \newcommand{\Espacio}{\vspace{1.5cm}}
-\graphicspath{../../../../../}
 \lstset{
   inputencoding=utf8,
   extendedchars=true,
   literate= {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'a}}1 {É}{{\'e}}1 {Í}{{\'i}}1 {Ó}{{\'o}}1 {Ú}{{\'u}}1,
   tabsize=2,
   basicstyle=\footnotesize,
-  language=C,
   breaklines=true,
 }
 
 \pagestyle{fancy}
-\fancyhf{}
 
 \renewcommand{\headrulewidth}{0pt}
 
@@ -49,6 +48,7 @@
    };
   \end{tikzpicture}
 }
+\fancyhf{}
 \newcommand{\Portada}{
   \begin{tikzpicture}[remember picture,overlay]
     \node[xshift=1in,yshift=-1.5cm] (A) at (current page.north west){};
@@ -64,6 +64,7 @@
 }
 
 \begin{document}
+  \AtBeginShipout{\Marco}
 \Portada{  
   \begin{center}
     {\Large
@@ -78,21 +79,20 @@
     Estudiante: Brandon Marquez Salazar\\
     \espacio
     \espacio
-    Tarea 1\\
+    Tarea 3\\
     \espacio
     \espacio
     Uso de PSO Velocity Clamping\\
     \espacio
     \espacio
-     Entrega 25 de Abril del 2023
+     Entrega 12 de Mayo del 2023
    }
   \end{center}
   }
-
-  \nuevap
+  \newgeometry{top=1in}
+  %\nuevap
   \large
   \section*{Introducción}
-  La
   La optimización de enjambre de partículas (PSO) se considera importante en la inteligencia basada en enjambre.
   El PSO está relacionado con el estudio de los enjambres; donde se trata de una simulación de bandadas de pájaros.
   Se puede utilizar para resolver una amplia variedad de problemas de optimización. Es un método heurístico el cual,
@@ -100,13 +100,18 @@
   emulan el comportamiento de un conjunto de individuos quienes buscan una posición espefífica, que se evalúa según
   el modelo planteado.
   \section*{Planteamiento del problema}
-  El problema que se nos plantea, es la búsqueda del valor más alto, utilizando el método de PSO con truncamiento de
-  velocidad, d'a siguiente ecuación:\\ \\
-  \begin{math}
-    {\centering
-      y(x,y)=\left( \frac{-((x+1)^2+(y-3.14)^2)}{5^2} \right)+\cos(2x)+\sin(2y) 
-    }
-  \end{math}
+  El problema que se nos plantea es lograr los resultados d'un experimento realizado para verificar l'eficiencia de
+  PSO con valor de constricción, utilizando como función objetivo, alguno de los planteados'n la tabla 'TABLE I'.
+  De la cual, se seleccionó la f2.
+  Se tendrá que correr el programa 30 veces, la configuración utilizada es: 
+  \begin{itemize}
+    \item Número de partículas: 30
+    \item Valor C1: 30
+    \item Valor C2: 30
+    \item Número de iteraciones: 20'000
+    \item Número de dimensiones: 100
+  \end{itemize}
+  \includepdf[pages=4]{../04 Jakob ComparativeStudyDE_PSO_EA.pdf}
   \section*{Descripción del programa}
   El programa consta de una estructura PARTICULA y una estructura ENJAMBRE. La estructura partícula tiene los valores
   importantes de posición y evaluación respecto al modelo matemático. También, se tienen funciones que permiten la
@@ -117,17 +122,23 @@
   entre otros elementos del procesamiento, hasta su limpieza).
   \section*{Código utilizado}
   \subsection*{Cabecera}
-  \lstinputlisting[language=C++]{../../pso.h}
+  \lstinputlisting[language=C]{../../pso.h}\newpage
   \subsection*{Definiciones}
-  \lstinputlisting[language=C++]{../../pso.c}
-  \subsection*{Programa principal, definición de modelo y proceso pso}
-  \lstinputlisting[language=C++]{../InertWght.c}
+  \lstinputlisting[language=C]{../../pso.c}\newpage
+  \subsection*{Programa principal, proceso pso}
+  \lstinputlisting[language=C]{../Constrict.c}\newpage
+  \subsection*{Programa principal, definición de modelo matemático (fortran)}
+  \lstinputlisting[language=Fortran]{../FuncionObjetivo.f90}\newpage
   \section*{Pruebas y resultados}
-  \includegraphics[scale=0.45,trim= 0 7cm 38cm 0,clip]{../PruebasDelPrograma}
+  \includegraphics[scale=0.2]{PRUEBA.png}
+  \subsection*{Datos de resultados}
+  \parbox{2.4in}{\csvautotabular{../Resultados_F2_30.csv}}
+  \parbox{3in}{
+  Con un promedio de: 49.4i para Local Best\\ y un promedio de 0 para Global Best\\ Sin poder calcular la DevEst\newpage}
   \section*{Conclusión}
-  El PSO con inercia es un método que impide la disperión de los elementos, ya que,
-  el primer modelo planteado, no tenía un control sobre'l movimiento d'as partículas.
-  Este modelo, con un solo coeficiente, cambia la forma en que las partículas se comportan,
-  ocasionalmente son más eficientes q'otros modelos. Sin embargo, es posible que haya ocasiones
-  en las que'l metodo base (truncamiento de velocidad) sea más eficiente.
+  El PSO con constricción impide la dispersión de un grupo de individuos, sin embargo, sus características matemáticas
+  nos impide, también, una selección libre de los elementos C1 y C2, ya que la ecuación puede dar indeterminación, si
+  acaso los valores no corresponden adecuadamente a la ecuación de constricción. Algo muy importante de plantear, es que
+  se tuvo que sintonizar adecuadamente para evitar resultados extremos. El correrlo más de una vez, permitió observar
+  el comportamiento y, estimando el promedio, verificar la precisión del método.
 \end{document}

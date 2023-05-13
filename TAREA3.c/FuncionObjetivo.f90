@@ -1,6 +1,4 @@
 module pso_funcion_objetivo
-! The update function uses the maximum value, so, if we search for the minimum value,
-! then we need to invert the result of FuncionObjetivo.
    use iso_c_binding
 
 contains
@@ -39,10 +37,10 @@ contains
       !   RDO = RDO + ((100*((VDP(k + 1) - VDP(k)**2)**2)) + ((VDP(k) - 1)**2))
       !end do
     !!! F6
-      RDO(1) = SUM((floor(VDP + 1.0/2)))
+      !RDO(1) = SUM((floor(VDP + 1.0/2)))
     !!! F7
       !
     !!! F8
-      !SUM(-VDP*SIN(SQRT(ABS(VDP))))
+      RDO(1) = SUM(-VDP*SIN(SQRT(ABS(VDP))))
    end subroutine
 end module

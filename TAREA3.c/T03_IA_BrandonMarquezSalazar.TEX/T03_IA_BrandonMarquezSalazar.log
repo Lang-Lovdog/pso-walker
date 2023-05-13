@@ -1,0 +1,749 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/VoidLinux) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 22:24
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**T03_IA_BrandonMarquezSalazar.tex
+(./T03_IA_BrandonMarquezSalazar.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (/usr/share/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count188
+\multirow@dima=\skip59
+\bigstrutjot=\dimen139
+) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+ (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen140
+\ar@mcellbox=\box47
+\extrarowheight=\dimen141
+\NC@list=\toks17
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box48
+)
+\TX@col@width=\dimen142
+\TX@old@table=\dimen143
+\TX@old@col=\dimen144
+\TX@target=\dimen145
+\TX@delta=\dimen146
+\TX@cols=\count189
+\TX@ftn=\toks18
+) (/usr/share/texmf-dist/tex/latex/pgfornament/pgfornament.sty (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen147
+\pgfutil@tempdimb=\dimen148
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box49
+) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+) (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen151
+\pgf@y=\dimen152
+\pgf@xa=\dimen153
+\pgf@ya=\dimen154
+\pgf@xb=\dimen155
+\pgf@yb=\dimen156
+\pgf@xc=\dimen157
+\pgf@yc=\dimen158
+\pgf@xd=\dimen159
+\pgf@yd=\dimen160
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count190
+\c@pgf@countb=\count191
+\c@pgf@countc=\count192
+\c@pgf@countd=\count193
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
+\pgf@sys@id@count=\count194
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count195
+\pgfsyssoftpath@bigbuffer@items=\count196
+) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen161
+\pgfmath@count=\count197
+\pgfmath@box=\box50
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count198
+)) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen162
+\pgf@picmaxx=\dimen163
+\pgf@picminy=\dimen164
+\pgf@picmaxy=\dimen165
+\pgf@pathminx=\dimen166
+\pgf@pathmaxx=\dimen167
+\pgf@pathminy=\dimen168
+\pgf@pathmaxy=\dimen169
+\pgf@xx=\dimen170
+\pgf@xy=\dimen171
+\pgf@yx=\dimen172
+\pgf@yy=\dimen173
+\pgf@zx=\dimen174
+\pgf@zy=\dimen175
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen176
+\pgf@path@lasty=\dimen177
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen178
+\pgf@shorten@start@additional=\dimen179
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box51
+\pgf@hbox=\box52
+\pgf@layerbox@main=\box53
+\pgf@picture@serial@count=\count199
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen180
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen181
+\pgf@pt@y=\dimen182
+\pgf@pt@temp=\dimen183
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen184
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen185
+\pgf@sys@shading@range@num=\count266
+\pgf@shadingcount=\count267
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box54
+)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box55
+) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen186
+\pgf@nodesepend=\dimen187
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen188
+\pgffor@skip=\dimen189
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count268
+\pgfplotmarksize=\dimen190
+)
+\tikz@lastx=\dimen191
+\tikz@lasty=\dimen192
+\tikz@lastxsaved=\dimen193
+\tikz@lastysaved=\dimen194
+\tikz@lastmovetox=\dimen195
+\tikz@lastmovetoy=\dimen196
+\tikzleveldistance=\dimen197
+\tikzsiblingdistance=\dimen198
+\tikz@figbox=\box56
+\tikz@figbox@bg=\box57
+\tikz@tempbox=\box58
+\tikz@tempbox@bg=\box59
+\tikztreelevel=\count269
+\tikznumberofchildren=\count270
+\tikznumberofcurrentchild=\count271
+\tikz@fig@count=\count272
+ (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count273
+\pgfmatrixcurrentcolumn=\count274
+\pgf@matrix@numberofcolumns=\count275
+)
+\tikz@expandcount=\count276
+ (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))) (/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks32
+\pgfopts@list@add@b@toks=\toks33
+)
+Package: pgfornament 2020/05/26 v1.2 vector ornaments
+ (/usr/share/texmf-dist/tex/latex/pgfornament/pgflibraryvectorian.code.tex
+2020/04/06 1.1 pgflibraryvectorian.code.tex
+)) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count277
+\Gm@cntv=\count278
+\c@Gm@tempcnt=\count279
+\Gm@bindingoffset=\dimen199
+\Gm@wd@mp=\dimen256
+\Gm@odd@mp=\dimen257
+\Gm@even@mp=\dimen258
+\Gm@layoutwidth=\dimen259
+\Gm@layoutheight=\dimen260
+\Gm@layouthoffset=\dimen261
+\Gm@layoutvoffset=\dimen262
+\Gm@dimlist=\toks34
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+ (/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+\babel@savecnt=\count280
+\U@D=\dimen263
+\l@babelnohyphens=\language87
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+)
+\bbl@dirlevel=\count281
+ (/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks35
+\es@quotdepth=\count282
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+)) (/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count283
+\lst@gtempboxa=\box60
+\lst@token=\toks36
+\lst@length=\count284
+\lst@currlwidth=\dimen264
+\lst@column=\count285
+\lst@pos=\count286
+\lst@lostspace=\dimen265
+\lst@width=\dimen266
+\lst@newlines=\count287
+\lst@lineno=\count288
+\lst@maxwidth=\dimen267
+ (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count289
+\lst@skipnumbers=\count290
+\lst@framebox=\box61
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/share/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+Package: csvsimple 2019/04/09 version 1.21 LaTeX CSV file processing
+ (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count291
+) (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+\csv@file=\read4
+\c@csvinputline=\count292
+\c@csvrow=\count293
+\c@csvcol=\count294
+\csv@out=\write4
+) (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+with kernel methods
+) (/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
+ (/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count295
+\calc@Bcount=\count296
+\calc@Adimen=\dimen268
+\calc@Bdimen=\dimen269
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count297
+\calc@Cskip=\skip64
+) (/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen270
+\ESO@tempdimb=\dimen271
+)
+\AM@pagewidth=\dimen272
+\AM@pageheight=\dimen273
+\AM@fboxrule=\dimen274
+ (/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count298
+\AM@pagebox=\box62
+\AM@global@opts=\toks37
+\AM@pagecnt=\count299
+\AM@toc@title=\toks38
+\c@AM@survey=\count300
+\AM@templatesizebox=\box63
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count301
+\l__pdf_internal_box=\box64
+) (./T03_IA_BrandonMarquezSalazar.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+\openout1 = `T03_IA_BrandonMarquezSalazar.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count302
+\scratchdimen=\dimen275
+\scratchbox=\box65
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen276
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks40
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(93.95122pt, 426.39256pt, 93.95122pt)
+* v-part:(T,H,B)=(93.95122pt, 607.06755pt, 93.95122pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=426.39256pt
+* \textheight=607.06755pt
+* \oddsidemargin=21.68123pt
+* \evensidemargin=21.68123pt
+* \topmargin=-15.31877pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+\c@lstlisting=\count308
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+ (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [1
+
+{/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \vbox (12.0pt too high) has occurred while \output is active []
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(72.26999pt, 627.30263pt, 95.39737pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=627.30263pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<../04 Jakob ComparativeStudyDE_PSO_EA.pdf, id=10, 614.295pt x 794.97pt>
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf  used on input line 114.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf  used on input line 114.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+<../04 Jakob ComparativeStudyDE_PSO_EA.pdf, id=13, page=4, 614.295pt x 794.97pt>
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf, page 4>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf , page4 used on input line 114.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf, page 4>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf , page4 used on input line 114.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [2
+
+]
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf, page 4>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf , page4 used on input line 114.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf, page 4>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf , page4 used on input line 114.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf)
+File: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf Graphic file (type pdf)
+<use ../04 Jakob ComparativeStudyDE_PSO_EA.pdf, page 4>
+Package pdftex.def Info: ../04 Jakob ComparativeStudyDE_PSO_EA.pdf , page4 used on input line 114.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [3 <../04 Jakob ComparativeStudyDE_PSO_EA.pdf>] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+) (../../pso.h
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 17.
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [4] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [5] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [6] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [7]) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [8] (../../pso.c
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2.
+ (/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [9]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 61.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 61.
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 65.
+
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [10] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [11] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [12] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [13] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [14]) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [15] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [16] (../Constrict.c
+Overfull \hbox (82.00038pt too wide) in paragraph at lines 44--46
+[][] 
+ []
+
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [17] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [18]) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [19] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (../FuncionObjetivo.f90 (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [20]) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [21]
+<PRUEBA.png, id=125, 1927.2pt x 1084.05pt>
+File: PRUEBA.png Graphic file (type png)
+<use PRUEBA.png>
+Package pdftex.def Info: PRUEBA.png  used on input line 133.
+(pdftex.def)             Requested size: 385.43318pt x 216.80615pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 135.
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [22 <./PRUEBA.png>] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+(/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [23] (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [24]
+Overfull \vbox (12.0pt too high) has occurred while \output is active []
+
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian71.pgf)
+Missing character: There is no ; in font nullfont!
+ (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian89.pgf) (/usr/share/texmf-dist/tex/generic/pgfornament/vectorian/vectorian72.pgf) [25
+
+]
+Overfull \vbox (12.0pt too high) has occurred while \output is active []
+
+ (./T03_IA_BrandonMarquezSalazar.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+) ) 
+Here is how much of TeX's memory you used:
+ 19592 strings out of 478994
+ 413465 string characters out of 5864719
+ 2109518 words of memory out of 5000000
+ 35914 multiletter control sequences out of 15000+600000
+ 406920 words of font info for 38 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,18n,130p,520b,3028s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on T03_IA_BrandonMarquezSalazar.pdf (25 pages, 5592868 bytes).
+PDF statistics:
+ 185 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+

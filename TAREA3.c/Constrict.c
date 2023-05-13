@@ -29,10 +29,11 @@ int main (void){
   LaSelecta= ProcesoPSO(
     100, Dimension,
     LimitesSup, LimitesInf,
-    20000, 0.6, 2.05, 2.05,
+    20000, 0.6, 2.08, 2.08,
     NULL
   );
-  ImprimeParticula(&LaSelecta,Dimension);
+  //ImprimeParticula(&LaSelecta,Dimension);
+  printf("%fi,%f\n",LaSelecta.Xfit,LaSelecta.Pfit);
   free(LaSelecta.Pi);
   free(LaSelecta.Vi);
   free(LaSelecta.Xi);
