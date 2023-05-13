@@ -98,7 +98,11 @@ void EvaluarEnjambreMax(
   );
 /* Similar a EvaluarEnjambre, con la particularidad de que Inicializa
  * los valores de Mejor Posicion Historica, de las particulas*/
-void EvaluacionInicialEnjambre(
+void EvaluacionInicialEnjambreMin(
+    ENJAMBRE    *__Enjambre__,
+    const float *__ParametrosDeOperacion__
+  );
+void EvaluacionInicialEnjambreMax(
     ENJAMBRE    *__Enjambre__,
     const float *__ParametrosDeOperacion__
   );

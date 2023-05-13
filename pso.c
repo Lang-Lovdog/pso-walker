@@ -172,7 +172,33 @@ void EvaluarEnjambreMax(ENJAMBRE *__Enjambre__,const float* __ParametrosDeOperac
 }
 
 
-void EvaluacionInicialEnjambre(ENJAMBRE *__Enjambre__,const float* __ParametrosDeOperacion__){
+void EvaluacionInicialEnjambreMin(ENJAMBRE *__Enjambre__,const float* __ParametrosDeOperacion__){
+  if(__Enjambre__){
+  float aux,BestFit;
+  //Calcular el valor de fitness de cada Particula
+  BestFit=FuncionObjetivo(
+      __Enjambre__->Part[0].Xi,
+      __Enjambre__->CantidadDeParametros,
+      __ParametrosDeOperacion__
+    );
+  for(unsigned int i=0; i<__Enjambre__->CantidadDeParticulas; i++){
+    aux=FuncionObjetivo(
+        __Enjambre__->Part[i].Xi,
+        __Enjambre__->CantidadDeParametros,
+        __ParametrosDeOperacion__
+      );
+    __Enjambre__->Part[i].Xfit=aux;
+    __Enjambre__->Part[i].Pfit=aux;
+    //Almacena el indice de la mejor particula de todo el enjambre
+    if(aux<BestFit){
+      BestFit=aux;
+      __Enjambre__->MejorParticulaDelGrupo=i;
+    }
+  }
+  }
+}
+
+void EvaluacionInicialEnjambreMax(ENJAMBRE *__Enjambre__,const float* __ParametrosDeOperacion__){
   if(__Enjambre__){
   float aux,BestFit;
   //Calcular el valor de fitness de cada Particula

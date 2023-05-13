@@ -10,8 +10,6 @@
 void FuncionObjetivoF(
     float        *__ValoresDeParametros__,
     unsigned int  __CantidadDeParametros__,
-    const float  *__ParametrosDeOperacion__,
-    unsigned int  __CantidadDeOperacion__,
     const float *__ResultadoDeOperacion__
 );
 
@@ -29,12 +27,12 @@ int main (void){
   }
 
   LaSelecta= ProcesoPSO(
-    25, Dimension,
+    100, Dimension,
     LimitesSup, LimitesInf,
     20000, 0.6, 2.05, 2.05,
     NULL
   );
-  ImprimeParticula(&LaSelecta,2);
+  ImprimeParticula(&LaSelecta,Dimension);
   free(LaSelecta.Pi);
   free(LaSelecta.Vi);
   free(LaSelecta.Xi);
@@ -52,10 +50,9 @@ float FuncionObjetivo(
   float ResultadoDeOperacion=0;
   FuncionObjetivoF(
     __ValoresDeParametros__,__CantidadDeParametros__,
-    __ParametrosDeOperacion__,0,
     &ResultadoDeOperacion
   );
-  return ResultadoDeOperacion;
+  return fabs(ResultadoDeOperacion);
 }
 
 PARTICULA ProcesoPSO(
@@ -90,7 +87,7 @@ PARTICULA ProcesoPSO(
     __LimiteSuperior__
   );
 
-  EvaluacionInicialEnjambre(Enj,__ParametrosDeOperacion__);
+  EvaluacionInicialEnjambreMin(Enj,__ParametrosDeOperacion__);
 
   while((t++)<Enj->MaximoDeIteraciones){
     ActualizarVelocidadConstriction(Enj);
