@@ -31,7 +31,7 @@ contains
       !   RDO = SUM(VDP(1:k)) + RDO
       !end do
     !!! F4
-      !RDO(1) = maxval(VDP)
+      RDO(1) = maxval(VDP)
     !!! F5
       !do k = 1, CDV - 1, 1
       !   RDO = RDO + ((100*((VDP(k + 1) - VDP(k)**2)**2)) + ((VDP(k) - 1)**2))
@@ -41,6 +41,6 @@ contains
     !!! F7
       !
     !!! F8
-      RDO(1) = SUM(-VDP*SIN(SQRT(ABS(VDP))))
+      !RDO(1) = SUM(-VDP*SIN(SQRT(ABS(VDP))))
    end subroutine
 end module

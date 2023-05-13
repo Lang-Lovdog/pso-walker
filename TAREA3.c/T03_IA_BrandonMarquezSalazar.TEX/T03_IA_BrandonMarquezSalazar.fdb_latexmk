@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1683951861 "T03_IA_BrandonMarquezSalazar.tex" "T03_IA_BrandonMarquezSalazar.pdf" "T03_IA_BrandonMarquezSalazar" 1683951884
+["pdflatex"] 1683953613 "T03_IA_BrandonMarquezSalazar.tex" "T03_IA_BrandonMarquezSalazar.pdf" "T03_IA_BrandonMarquezSalazar" 1683953635
   "../../pso.c" 1683935912 12192 79981bf8f6121080c715767bb09833ff ""
   "../../pso.h" 1683935869 6405 082a4465c0c424e57be5eb041f89818c ""
   "../04 Jakob ComparativeStudyDE_PSO_EA.pdf" 1683943651 172087 30f5167930fb27296633d49e915eb576 ""
   "../Constrict.c" 1683949744 3192 1a0b06a28476f5a919847e7dcf9d98ce ""
-  "../FuncionObjetivo.f90" 1683951859 1273 ac3785f72103a166cacd3a184ab8eb80 ""
+  "../FuncionObjetivo.f90" 1683953613 1273 3bb9f8a15328814ad4ba9546ec36871c ""
   "../Resultados_F2_30.csv" 1683949670 612 589afcaeb53d1f818354234c02eb2ac9 ""
   "/home/lang_lovdog/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1682693315 2724592 85c02a0a7eeb1a02a2060b4698bcc273 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1639192684 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -155,9 +155,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1680710935 39967 c1691bf11496e9d6ea53f7eba5c4754e ""
   "/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1682290138 334227 92f850e77170e97d49db3fab2645ba0e ""
   "PRUEBA.png" 1683947424 729494 43b3292ee440308ac60486be1dc65e9f ""
-  "T03_IA_BrandonMarquezSalazar.aux" 1683951883 19768 7dcbddcdad329b401cd97703200c513f "pdflatex"
+  "T03_IA_BrandonMarquezSalazar.aux" 1683953635 19768 7dcbddcdad329b401cd97703200c513f "pdflatex"
   "T03_IA_BrandonMarquezSalazar.tex" 1683951341 6356 7e868877c35c177a406cf34c8147c60e ""
   (generated)
   "T03_IA_BrandonMarquezSalazar.log"
-  "T03_IA_BrandonMarquezSalazar.aux"
   "T03_IA_BrandonMarquezSalazar.pdf"
+  "T03_IA_BrandonMarquezSalazar.aux"
